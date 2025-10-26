@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 
 export default function Hero() {
@@ -22,8 +23,9 @@ export default function Hero() {
             <div className='my-5'>
               <div className='my-5'>
                 <button
-                  type='button'
-                  className='group relative cursor-pointer overflow-hidden rounded-xl px-10 border-4 border-zinc-900 p-3 text-zinc-900 hover:text-white transition-colors duration-50 dark:border-zinc-900 dark:text-zinc-200'>
+                  type='button' onClick={() =>window.open('/misc/Joshy 2025 CV.pdf', '_blank')}
+                  className='group relative cursor-pointer overflow-hidden rounded-xl border-4 border-zinc-900 p-3 px-10 text-zinc-900 transition-colors duration-50 hover:text-white dark:border-zinc-900 dark:text-zinc-200'
+                >
                   <span className='relative z-10'>Download CV</span>
                   {/* sliding background */}
                   <span className='absolute inset-0 w-0 bg-zinc-900 transition-all duration-200 ease-linear group-hover:w-full dark:bg-zinc-900'></span>
