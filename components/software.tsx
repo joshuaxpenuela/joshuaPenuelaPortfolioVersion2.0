@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Software() {
   return (
-    <section className='my-10 w-full'>
+    <section className='mt-30 w-full'>
       <div>
         <div className='m-auto w-full'>
           <div className='place-items-center-safe pb-10'>
