@@ -113,34 +113,26 @@ export default function Software() {
           </div>
           <div className='mx-40 grid grid-cols-5 gap-5'>
             {softwares.map(software => (
-              <div
+              <a
                 key={software.name}
-                className='flex flex-col items-center rounded-md border py-4'
+                href={software.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-4 text-gray-400 transition-transform duration-200 hover:scale-105 hover:bg-zinc-900 hover:text-white'
               >
                 <div className='flex h-[60px] w-[60px] items-center justify-center'>
                   {software.logo && (
-                    <a
-                      href={software.href}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <img
-                        src={software.logo}
-                        alt={software.name}
-                        className='max-h-full max-w-full transform cursor-pointer object-contain transition-transform duration-300 hover:scale-110'
-                      />
-                    </a>
+                    <img
+                      src={software.logo}
+                      alt={software.name}
+                      className='max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110'
+                    />
                   )}
                 </div>
-                <a
-                  href={software.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='mt-2 text-center font-bold wrap-break-words text-gray-400 hover:text-white'
-                >
+                <p className='mt-2 text-center font-bold break-words'>
                   {software.name}
-                </a>
-              </div>
+                </p>
+              </a>
             ))}
           </div>
         </div>

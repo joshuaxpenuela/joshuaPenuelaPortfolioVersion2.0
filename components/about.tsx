@@ -18,19 +18,18 @@ export default function About() {
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
 
   return (
-    <section className='w-full mt-20 flex flex-col gap-y-10'>
+    <section className='mt-20 flex w-full flex-col gap-y-10'>
       {/* Header */}
-      <div className='my-10 w-full flex justify-center'>
+      <div className='my-10 flex w-full justify-center'>
         <h1 className='text-4xl font-bold'>About Me</h1>
       </div>
 
       {/* Main Content Grid */}
-      <div className='mb-10 grid grid-cols-1 lg:grid-cols-2 gap-50 px-4 lg:px-8 max-w-8xl mx-auto'>
-
+      <div className='max-w-8xl mx-auto mb-10 grid grid-cols-1 gap-50 px-4 lg:grid-cols-2 lg:px-8'>
         {/* Left Side - Image Slider */}
-        <div className='flex w-full justify-center items-center'>
+        <div className='flex w-full items-center justify-center'>
           {/* Slider Container */}
-          <div className='relative w-full max-w-[650px] h-[540px] overflow-hidden'>
+          <div className='relative h-[540px] w-full max-w-[650px] overflow-hidden'>
             {/* Slider Wrapper */}
             <div
               className='flex h-full transition-transform duration-300 ease-in-out'
@@ -39,10 +38,10 @@ export default function About() {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className='relative shrink-0 w-full h-full flex items-center justify-center'
+                  className='relative flex h-full w-full shrink-0 items-center justify-center'
                 >
                   {/* Image Container */}
-                  <div className='relative w-full h-full rounded-xl border-2 border-zinc-400/50 bg-transparent'>
+                  <div className='relative h-full w-full rounded-xl border-2 border-zinc-400/50 bg-transparent'>
                     <Image
                       src={slide.src}
                       alt={slide.alt}
@@ -57,21 +56,21 @@ export default function About() {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className='absolute top-1/2 left-2 -translate-y-1/2 rounded bg-black/50 p-2 text-white hover:bg-black/70 transition-colors z-10'
+              className='absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 text-white transition-colors hover:bg-black/70'
               aria-label='Previous slide'
             >
               ‹
             </button>
             <button
               onClick={nextSlide}
-              className='absolute top-1/2 right-2 -translate-y-1/2 rounded bg-black/50 p-2 text-white hover:bg-black/70 transition-colors z-10'
+              className='absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 text-white transition-colors hover:bg-black/70'
               aria-label='Next slide'
             >
               ›
             </button>
 
             {/* Dots Indicator */}
-            <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10'>
+            <div className='absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 space-x-2'>
               {slides.map((_, idx) => (
                 <button
                   key={idx}
@@ -89,19 +88,26 @@ export default function About() {
         {/* Right Side - Text Content */}
         <div className='flex items-center justify-center px-4'>
           <div className='max-w-xl'>
-            <h1 className='mb-5 text-3xl lg:text-4xl font-bold'>
+            <h1 className='mb-5 text-3xl font-bold lg:text-4xl'>
               JOSHUA FAMADICO PENUELA
             </h1>
-            <p className='text-base leading-relaxed text-justify'>
+            <p className='text-justify text-base leading-relaxed'>
               A <i>Magna Cum Laude</i> graduate of the BS Information Technology
-              program at Cavite State University - Main Campus, with a passion
-              for Software Development, System Analysis, and the IT field.
-              Obsessed with technology since 7 years old (2008), learned HTML in
-              sixth grade (2013), consistent honor student in High School, and
-              continued to learn more languages and frameworks in my college
-              years (2021-2025). With experience in web development in a
-              government internship, and mobile development in the Capstone
-              Project.
+              program at{' '}
+              <a
+                href='https://cvsu.edu.ph/'
+                className='font-bold'
+                target='_blank'
+              >
+                Cavite State University - Main Campus
+              </a>
+              , with a passion for Software Development, System Analysis, and
+              the IT field. Obsessed with technology since 7 years old (2008),
+              learned HTML in sixth grade (2013), consistent honor student in
+              High School, and continued to learn more languages and frameworks
+              in my college years (2021-2025). With experience in web
+              development in a government internship, and mobile development in
+              the Capstone Project.
             </p>
           </div>
         </div>
