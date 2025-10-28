@@ -53,7 +53,7 @@ export default function Footer() {
     { name: 'Facebook', href: 'https://www.facebook.com/joshuaxpenuela' },
     { name: 'Instagram', href: 'https://www.instagram.com/joshuaxpenuela' },
     { name: 'GitHub', href: 'https://github.com/joshuaxpenuela' },
-    { name: 'YouTube', href: 'https://www.youtube.com/joshuaxpenuela' }
+    { name: 'YouTube', href: 'https://www.youtube.com/@joshuaxpenuela' }
   ]
 
   return (
