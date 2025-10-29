@@ -17,7 +17,8 @@ export default function Header() {
   ]
 
   const externalLinks = [
-    { name: 'CV', href: 'misc/JOSHY 2025 CV.pdf' },
+    // { name: 'CV', href: 'misc/JOSHY 2025 CV.pdf' },
+    {name: 'Github', href: 'https://www.github.com/joshuaxpenuela'},
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/joshuaxpenuela/' }
   ]
 
