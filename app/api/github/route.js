@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 export async function GET() {
   const username = process.env.GITHUB_USERNAME;
   const token = process.env.GITHUB_TOKEN;
