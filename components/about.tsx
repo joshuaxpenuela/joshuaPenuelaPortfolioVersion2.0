@@ -85,7 +85,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Side - Text Content */}
+        {/* Right Side*/}
         <div className='flex items-center justify-center px-4'>
           <div className='max-w-xl'>
             <h1 className='mb-5 text-3xl font-bold lg:text-4xl'>

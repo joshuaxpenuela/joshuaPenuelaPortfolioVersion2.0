@@ -3,6 +3,7 @@ import Github from '@/components/github'
 import Hero from '@/components/hero'
 import About from '@/components/about'
 import Software from '@/components/software'
+import Contact from '@/components/contact'
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
           <Github/>
           <About/>
           <Software/>
+          <Contact/>
         </div>          
       </div>
     </section>

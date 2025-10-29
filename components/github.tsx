@@ -32,7 +32,7 @@ export default function GithubStats() {
   return (
     <div className='bg-background border-y-2 border-gray-800/50 p-4 dark:border-gray-400/50'>
       <div className='pt-5'>
-        <h2 className='mb-2 justify-self-center-safe text-4xl font-semibold'>GitHub Stats</h2>
+        <h2 className='mb-2 justify-self-center-safe text-4xl font-bold'>GitHub Stats</h2>
       </div>
 
       <div className='grid w-full grid-cols-3 items-center py-4 text-center text-xl font-bold text-zinc-400'>

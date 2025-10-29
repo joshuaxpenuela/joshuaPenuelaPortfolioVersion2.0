@@ -33,17 +33,17 @@ const softwares = [
   },
   {
     logo: 'logos/html.svg',
-    href: '',
+    href: '###',
     name: 'HTML5'
   },
   {
     logo: 'logos/css.svg',
-    href: '',
+    href: '###',
     name: 'CSS'
   },
   {
     logo: 'logos/javascript.svg',
-    href: '',
+    href: '###',
     name: 'JavaScript'
   },
   {
@@ -105,7 +105,7 @@ const softwares = [
 
 export default function Software() {
   return (
-    <section className='mt-30 mb-20 w-full'>
+    <section className='mt-30 mb-30 w-full'>
       <div>
         <div className='m-auto w-full'>
           <div className='place-items-center-safe pb-15'>
@@ -129,7 +129,7 @@ export default function Software() {
                     />
                   )}
                 </div>
-                <p className='mt-2 text-center font-bold break-words'>
+                <p className='mt-2 text-center font-bold wrap-break-words'>
                   {software.name}
                 </p>
               </a>
