@@ -37,7 +37,7 @@ export default function Footer() {
     { name: 'Web Development', href: '/#' },
     { name: 'Mobile Development', href: '/softwareDev' },
     { name: 'Graphics', href: '/graphics' },
-    { name: 'CV / Resume', href: '#' }
+    { name: 'CV / Resume', href: 'misc/Joshy 2025 CV.pdf' }
   ]
 
   const contacts = [
@@ -82,7 +82,7 @@ export default function Footer() {
                 ))}
               </div>
 
-              <a href='#'className='mt-2 flex items-center gap-2 text-sm font-bold transition-colors'>
+              <a href='https://github.com/joshuaxpenuela/joshuaPenuelaPortfolioVersion2.0.git' target='_blank' className='mt-2 flex items-center gap-2 text-sm font-bold transition-colors'>
                 V2.0 Source Code
                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'
                 >

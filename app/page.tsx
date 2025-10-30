@@ -11,9 +11,9 @@ export const Home = () => {
       <div className='mx-auto flex flex-col'>
         <div>
           <Hero/>
-          <Github/>
           <About/>
           <Software/>
+          <Github/>
           <Contact/>
         </div>          
       </div>

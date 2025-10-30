@@ -7,12 +7,14 @@ export default function Contact() {
             <div className='w-full'>
                 <h1 className='place-self-center-safe text-4xl font-bold'>Let's Connect!</h1>
             </div>
-            <div>
-                <div>
+            <div className='grid grid-cols-2 w-full border'>
+                <div className='border'>
+                  <p>sample 1</p>
 
                 </div>
 
-                <div>
+                <div className='border'>
+                  <p>sample 2</p>
 
                 </div>
             </div>
