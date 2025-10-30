@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
+import JoshyImage from '@/public/pictures/Joshyyy.png'
 
 export default function Hero() {
   return (
@@ -38,8 +40,8 @@ export default function Hero() {
         <div className='place-items-center-safe'>
           <div className='relative mx-auto w-fit'>
             {/* Image */}
-            <img
-              src='/pictures/joshyyy.png'
+            <Image
+              src={JoshyImage}
               alt='Joshy'
               className='w-full pt-10'
             />
