@@ -18,7 +18,7 @@ export default function Hero() {
                 Web <a className='font-normal'>and</a> Mobile Developer
               </h1>
               <h1 className='text-4xl font-bold'>
-                Tech Enthusiast, Graphics Designer
+                Tech Enthusiast, Graphic Designer
               </h1>
             </div>
 

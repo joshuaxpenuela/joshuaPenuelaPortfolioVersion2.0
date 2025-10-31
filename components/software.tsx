@@ -32,14 +32,14 @@ const softwares = [
     name: 'npm'
   },
   {
+    logo: 'logos/python.svg',
+    href: 'https://www.python.org/',
+    name: 'Python'
+  },
+  {
     logo: 'logos/html.svg',
     href: '###',
     name: 'HTML5'
-  },
-  {
-    logo: 'logos/css.svg',
-    href: '###',
-    name: 'CSS'
   },
   {
     logo: 'logos/javascript.svg',
@@ -118,18 +118,18 @@ export default function Software() {
                 href={software.href}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-4 text-gray-400 transition-transform duration-200 hover:scale-105 hover:bg-zinc-900 hover:text-white'
+                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-4 text-zinc-600 transition-transform duration-200 hover:scale-105 hover:bg-zinc-300 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white'
               >
                 <div className='flex h-[60px] w-[60px] items-center justify-center'>
                   {software.logo && (
                     <img
                       src={software.logo}
                       alt={software.name}
-                      className='max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110'
+                      className={`max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110 ${['Next.js', 'Vercel', 'Github'].includes(software.name) ? 'dark:invert-100' : ''}`}
                     />
                   )}
                 </div>
-                <p className='mt-2 text-center font-bold wrap-break-words'>
+                <p className='wrap-break-words mt-2 text-center font-bold'>
                   {software.name}
                 </p>
               </a>

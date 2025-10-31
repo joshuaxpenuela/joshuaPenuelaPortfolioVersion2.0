@@ -37,22 +37,22 @@ export default function GithubStats() {
 
       <div className='grid w-full grid-cols-3 items-center py-4 text-center text-xl font-bold text-zinc-400'>
         <div className='flex flex-row justify-center-safe gap-2'>
-          <Users className='h-8 w-8 text-zinc-400' />
-          <p className='flex items-center gap-2'>
+          <Users className='h-8 w-8 text-zinc-400 cursor-pointer ' />
+          <p className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
             Followers: {renderValue(stats?.followers)}
           </p>
         </div>
 
         <div className='flex flex-row justify-center-safe gap-2'>
-          <GitCommit className='h-8 w-8 text-zinc-400' />
-          <p className='flex items-center gap-2'>
+          <GitCommit className='h-8 w-8 text-zinc-400 cursor-pointer ' />
+          <p className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
             Commits: {renderValue(stats?.commits)}
           </p>
         </div>
 
         <div className='flex flex-row justify-center-safe gap-2'>
-          <Star className='h-8 w-8 text-zinc-400' />
-          <p className='flex items-center gap-2'>
+          <Star className='h-8 w-8 text-zinc-400 cursor-pointer ' />
+          <p className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
             Stars: {renderValue(stats?.stars)}
           </p>
         </div>

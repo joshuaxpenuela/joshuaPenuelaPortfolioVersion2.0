@@ -88,10 +88,33 @@ export default function About() {
         {/* Right Side*/}
         <div className='flex items-center justify-center px-4'>
           <div className='max-w-xl'>
-            <h1 className='mb-5 text-3xl font-bold lg:text-4xl'>
+            <h1 className='text-3xl font-bold lg:text-4xl'>
               JOSHUA FAMADICO PENUELA
             </h1>
-            <p className='text-justify text-base leading-relaxed'>
+            <div className='flex items-center gap-2'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='h-6 w-6'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M12 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z'
+                />
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M19.5 10.5c0 7.5-7.5 12-7.5 12s-7.5-4.5-7.5-12a7.5 7.5 0 1115 0z'
+                />
+              </svg>
+
+              <a href='https://www.google.com/maps/place/Dasmari%C3%B1as,+Cavite/@14.3063958,120.925758,16887m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3397d5b87c111e25:0xab8cb698f840321f!8m2!3d14.3338498!4d120.9542344!16zL20vMDJyMzVm?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D' target='_none' className='text-xl'><i>Dasmariñas City, Cavite, Philippines</i></a>
+            </div>
+            <p className='mt-3 text-justify text-base leading-relaxed'>
               A <i>Magna Cum Laude</i> graduate of the BS Information Technology
               program at{' '}
               <a
@@ -99,13 +122,14 @@ export default function About() {
                 className='font-bold'
                 target='_blank'
               >
+                {' '}
                 Cavite State University - Main Campus
               </a>
               , with a passion for Software Development, System Analysis, and
               the IT field. Obsessed with technology since 7 years old (2008),
               learned HTML in sixth grade (2013), consistent honor student in
-              High School, and continued to learn more languages and frameworks
-              in my college years (2021-2025). With experience in web
+              High School (2014-2020), and continued to learn more languages and
+              frameworks in my college years (2021-2025). With experience in web
               development in a government internship, and mobile development in
               the Capstone Project.
             </p>
