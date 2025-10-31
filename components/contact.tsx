@@ -18,15 +18,15 @@ const socials = [
     height: 40
   },
   {
-    name: 'Discord',
-    url: 'https://www.facebook.com/joshuaxpenuela',
+    name: 'Discord (aqua.timez)',
+    url: 'https://discord.com/users/aqua.timez',
     logo: 'logos/discord.svg',
     width: 40,
     height: 40
   },
   {
     name: 'Youtube',
-    url: 'https://www.facebook.com/joshuaxpenuela',
+    url: 'https://www.youtube.com/@joshuaxpenuela',
     logo: 'logos/youtube.svg',
     width: 33,
     height: 0
@@ -43,9 +43,9 @@ export default function Contact() {
           </h1>
         </div>
         <div className='grid w-full grid-cols-2'>
-          <div className='center- border'>
-            <div>
-              <p>Hello World 1</p>
+          <div className='mx-40 justify-items-center-safe py-15'>
+            <div className='mx-'>
+              <p>Under Development...</p>
             </div>
           </div>
 
