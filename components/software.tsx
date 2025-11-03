@@ -3,7 +3,7 @@ import React from 'react'
 const softwares = [
   {
     logo: '/logos/nextjs.svg',
-    href: 'https://nextjs.org/  ',
+    href: 'https://nextjs.org/',
     name: 'Next.js'
   },
   {
@@ -63,7 +63,7 @@ const softwares = [
   },
   {
     logo: 'logos/postman.svg',
-    href: 'https://www.postman.com/ ',
+    href: 'https://www.postman.com/',
     name: 'Postman'
   },
   {
@@ -109,18 +109,18 @@ export default function Software() {
       <div>
         <div className='m-auto w-full'>
           <div className='place-items-center-safe pb-15'>
-            <h1 className='text-4xl font-bold'>Softwares</h1>
+            <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-center px-4'>Softwares</h1>
           </div>
-          <div className='mx-40 grid grid-cols-5 gap-5'>
+          <div className='mx-4 sm:mx-8 md:mx-16 lg:mx-40 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5'>
             {softwares.map(software => (
               <a
                 key={software.name}
                 href={software.href}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-4 text-zinc-600 transition-transform duration-200 hover:scale-105 hover:bg-zinc-300 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white'
+                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-3 sm:py-4 text-zinc-600 transition-transform duration-200 hover:scale-105 hover:bg-zinc-300 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white'
               >
-                <div className='flex h-[60px] w-[60px] items-center justify-center'>
+                <div className='flex h-[50px] w-[50px] sm:h-[60px] sm:w-[60px] items-center justify-center'>
                   {software.logo && (
                     <img
                       src={software.logo}
@@ -129,7 +129,7 @@ export default function Software() {
                     />
                   )}
                 </div>
-                <p className='wrap-break-words mt-2 text-center font-bold'>
+                <p className='wrap-break-words mt-2 text-center font-bold text-xs sm:text-sm px-2'>
                   {software.name}
                 </p>
               </a>
