@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { Users, GitCommit, Star } from 'lucide-react'
 
 type GithubStatsType = {
@@ -39,23 +40,23 @@ export default function GithubStats() {
       <div className='grid w-full grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 items-center py-4 text-center text-base sm:text-lg lg:text-xl font-bold text-zinc-400'>
         <div className='flex flex-row justify-center-safe gap-2'>
           <Users className='h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-zinc-400 cursor-pointer shrink-0' />
-          <p className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
+          <Link href='https://github.com/joshuaxpenuela' target='_blank' className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
             Followers: {renderValue(stats?.followers)}
-          </p>
+          </Link>
         </div>
 
         <div className='flex flex-row justify-center-safe gap-2'>
           <GitCommit className='h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-zinc-400 cursor-pointer shrink-0' />
-          <p className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
+          <a href='https://github.com/joshuaxpenuela' target='_blank' className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
             Commits: {renderValue(stats?.commits)}
-          </p>
+          </a>
         </div>
 
         <div className='flex flex-row justify-center-safe gap-2'>
           <Star className='h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-zinc-400 cursor-pointer shrink-0' />
-          <p className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
+          <a href='https://github.com/joshuaxpenuela' target='_blank' className='flex items-center gap-2 cursor-pointer dark:hover:text-white'>
             Stars: {renderValue(stats?.stars)}
-          </p>
+          </a>
         </div>
       </div>
     </div>
