@@ -99,7 +99,11 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu */}
-      <div className={md:hidden border-t border-gray-800/50 dark:border-gray-400/50 bg-background/95 backdrop-blur-xl overflow-hidden transition-all duration-300 ease-in-out ${ mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0' }} >
+      <div
+        className={`md:hidden border-t border-gray-800/50 dark:border-gray-400/50 bg-background/95 backdrop-blur-xl overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
         <div className='container mx-auto px-4 py-4'>
           {/* Mobile Navigation Links */}
           <ul className='flex flex-col gap-4 mb-4'>
