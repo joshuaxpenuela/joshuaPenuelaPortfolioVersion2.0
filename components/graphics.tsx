@@ -3,61 +3,73 @@ import Software from './software'
 
 const GraphicDesigns = [
   {
+    id: 1,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 2,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 3,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 4,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 5,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 6,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 7,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 8,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 9,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 10,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 11,
     name: 'img',
     image: '',
     software: ''
   },
   {
+    id: 12,
     name: 'img',
     image: '',
     software: ''
@@ -74,9 +86,11 @@ export default function Graphics() {
         <div className='w-full pt-20'>
           <div className='mx-40 grid grid-cols-4 gap-x-10 gap-y-10'>
             {GraphicDesigns.map(graphicimage => (
-              <div className='place-items-center-safe rounded-lg border-2'>
-                {graphicimage.image}
-                {graphicimage.name}
+              <div
+                key={graphicimage.id}
+                className='place-items-center-safe rounded-lg border-2'
+              >
+                <img src={graphicimage.image} alt={graphicimage.name} />
               </div>
             ))}
           </div>
