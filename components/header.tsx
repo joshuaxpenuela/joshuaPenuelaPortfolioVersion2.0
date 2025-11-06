@@ -74,7 +74,7 @@ export default function Header() {
             className='text-foreground p-2 relative w-10 h-10 flex items-center justify-center'
             aria-label='Toggle menu'
           >
-            <div className='relative w-6 h-6'>
+            <div className='relative w-6 h-6 cursor-pointer'>
               {/* Top line */}
               <span
                 className={`absolute left-0 h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
