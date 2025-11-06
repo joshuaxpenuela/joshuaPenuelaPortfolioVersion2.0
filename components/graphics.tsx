@@ -123,16 +123,16 @@ export default function Graphics() {
     <section className='flex w-full flex-col items-center pb-24'>
       <div className='w-full text-black dark:text-white'>
         <div className='flex flex-col gap-y-15 mt-40 mb-15 w-full border-b-3 border-zinc-800 pb-15'>
-          <div>
+          <div className='animate-fade-in-up'>
             <h1 className='text-center text-5xl font-black'>Graphic Designs</h1>
           </div>
-          <div>
+          <div className='animate-fade-in-up animation-delay-100'>
             <h4 className='text-center text-xl'>
               Samples of my 7 year experience graphic designing
             </h4>
           </div>
         </div>
-        <div className='w-full pt-20 px-4 md:px-8 lg:px-40'>
+        <div className='w-full pt-20 px-4 md:px-8 lg:px-40 animate-fade-in-up animation-delay-200'>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
             {GraphicDesigns.map(graphicimage => (
               <div
@@ -154,19 +154,23 @@ export default function Graphics() {
       {/* Full Image Modal */}
       {selectedImage && (
         <div
-          className='bg-opacity-90 fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4'
-          onClick={() => setSelectedImage(null)}
+          className={`bg-opacity-90 fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 transition-opacity duration-300 ${
+            isClosing ? 'opacity-0' : 'opacity-100'
+          }`}
+          onClick={handleClose}
         >
           <button
-            className='absolute top-4 right-4 cursor-pointer text-white transition-colors hover:text-gray-300'
-            onClick={() => setSelectedImage(null)}
+            className='absolute top-4 right-4 cursor-pointer text-white transition-colors hover:text-gray-300 z-10'
+            onClick={handleClose}
           >
             <X size={32} strokeWidth={2} />
           </button>
           <img
             src={selectedImage.image}
             alt={selectedImage.name}
-            className='max-h-full max-w-full object-contain'
+            className={`max-h-full max-w-full object-contain transition-all duration-300 ${
+              isClosing ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100 animate-slideUpFade'
+            }`}
             onClick={e => e.stopPropagation()}
           />
         </div>
