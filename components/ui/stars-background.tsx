@@ -75,7 +75,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
           x: Math.random() * width,
           y: Math.random() * height,
           radius: Math.random() * 0.05 + 0.5,
-          opacity: Math.random() * 0.5 + 0.5,
+          opacity: Math.random() * 0.9 + 0.9,
           twinkleSpeed: shouldTwinkle
             ? minTwinkleSpeed +
               Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
@@ -142,7 +142,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         // Use white for dark mode, dark gray/black for light mode
-        const color = isDark ? '255, 255, 255' : '30, 30, 30';
+        const color = isDark ? '255, 255, 255' : '600, 600, 600';
         ctx.fillStyle = `rgba(${color}, ${star.opacity})`;
         ctx.fill();
 

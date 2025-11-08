@@ -32,7 +32,7 @@ export default function GithubStats() {
     )
 
   return (
-    <div className='bg-background border-y-2 border-gray-800/50 p-4 dark:border-gray-400/50'>
+    <div className='bg-white dark:bg-zinc-950 border-y-2 border-gray-800/50 p-4 dark:border-gray-400/50'>
       <div className='pt-5'>
         <h2 className='mb-2 justify-self-center-safe text-center text-2xl font-bold sm:text-3xl lg:text-4xl'>
           GitHub Stats

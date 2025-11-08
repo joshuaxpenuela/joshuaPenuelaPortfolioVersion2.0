@@ -6,7 +6,7 @@ import JoshyImage from '@/public/pictures/Joshyyy.png'
 export default function Hero() {
   return (
     <section className='flex flex-col items-start pt-20 sm:pt-24 pb-12 sm:pb-16 md:pb-20 lg:pb-24 md:flex-row md:items-center md:pt-0'>
-      <div className='grid w-full grid-cols-1 md:grid-cols-2 justify-between gap-6 md:gap-4 text-black dark:bg-linear-to-t dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-800 dark:text-white'>
+      <div className='grid w-full grid-cols-1 md:grid-cols-2 justify-between gap-6 md:gap-4 text-black dark:bg-linear-to-t dark:from-zinc-950 dark:via-zinc-950 dark:to-trasnparent dark:text-white'>
         
         {/* Hero left side - Text (order-2 on mobile, order-1 on desktop) */}
         <div className='order-2 md:order-1 flex items-center justify-center md:place-items-center-safe py-8 sm:py-12 md:py-40 lg:py-80 px-4 sm:px-6'>

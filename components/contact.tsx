@@ -146,7 +146,7 @@ export default function Contact() {
         </div>
         <div className='grid w-full grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 py-8 lg:py-15'>
           {/* Left Side - Contact Form */}
-          <div className='mx-4 sm:mx-8 lg:mx-40 justify-items-center-safe border-2 rounded-2xl p-6 sm:p-8 border-zinc-400 dark:border-zinc-600'>
+          <div className='mx-4 sm:mx-8 lg:mx-40 justify-items-center-safe border-2 rounded-2xl p-6 sm:p-8 border-zinc-400 dark:border-zinc-600 dark:bg-zinc-950 bg-white  '>
             <form onSubmit={handleSubmit} className='w-full space-y-4'>
               <div>
                 <h1 className='w-full text-center text-3xl font-bold pb-5'>Send me an email!</h1>
@@ -160,7 +160,7 @@ export default function Contact() {
                   value={formData.from_name}
                   onChange={handleChange}
                   required
-                  className='w-full px-4 py-2 border-2 border-zinc-300 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-600'
+                  className='w-full px-4 py-2 border-2 border-zinc-400 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-800 dark:focus:border-zinc-500'
                   placeholder='John Doe'
                   disabled={status === 'sending'}
                 />
@@ -177,7 +177,7 @@ export default function Contact() {
                   value={formData.from_email}
                   onChange={handleChange}
                   required
-                  className='w-full px-4 py-2 border-2 border-zinc-300 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-600'
+                  className='w-full px-4 py-2 border-2 border-zinc-400 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-800 dark:focus:border-zinc-500'
                   placeholder='john.doe@email.com'
                   disabled={status === 'sending'}
                 />
@@ -194,7 +194,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className='w-full px-4 py-2 border-2 border-zinc-300 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-600 resize-none'
+                  className='w-full px-4 py-2 border-2 border-zinc-400 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-800 dark:focus:border-zinc-500 resize-none'
                   placeholder='Your message...'
                   disabled={status === 'sending'}
                 />
@@ -235,7 +235,7 @@ export default function Contact() {
                     href={social.url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='flex flex-row items-center border-2 border-gray-800/50 dark:border-gray-400/50 dark:hover:bg-zinc-900 hover:bg-gray-300/50 rounded-lg py-2 px-4 gap-3'
+                    className='flex flex-row items-center border-2 border-gray-800/50 dark:border-gray-400/50 dark:hover:bg-zinc-900 hover:bg-gray-300/50 rounded-lg py-2 px-4 gap-3 dark:bg-zinc-950 dark:text-dark'
                   >
                     <div className='shrink-0'>
                       {social.logo && (
