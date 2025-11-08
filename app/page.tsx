@@ -10,12 +10,14 @@ export const Home = () => {
     <section className='mx-auto w-full'>
       <div className='mx-auto flex flex-col'>
         <div>
-          <Hero/>
-          <About/>
-          <Software/>
-          <Github/>
-          <Contact/>
-        </div>          
+          <Hero />
+          <div className='bg-'>
+            <About />
+            <Software />
+            <Github />
+            <Contact />
+          </div>
+        </div>
       </div>
     </section>
   )

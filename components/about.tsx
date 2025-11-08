@@ -56,14 +56,14 @@ export default function About() {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className='absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 sm:p-3 text-white text-xl sm:text-2xl transition-all hover:bg-black/70 hover:scale-110'
+              className='absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 sm:p-3 text-white text-xl sm:text-2xl transition-all hover:bg-black/70 hover:scale-110 cursor-pointer'
               aria-label='Previous slide'
             >
               ‹
             </button>
             <button
               onClick={nextSlide}
-              className='absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 sm:p-3 text-white text-xl sm:text-2xl transition-all hover:bg-black/70 hover:scale-110'
+              className='absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 sm:p-3 text-white text-xl sm:text-2xl transition-all hover:bg-black/70 hover:scale-110 cursor-pointer'
               aria-label='Next slide'
             >
               ›
@@ -129,7 +129,7 @@ export default function About() {
               the IT field. Obsessed with technology since 7 years old (2008),
               learned HTML in sixth grade (2013), consistent honor student in
               High School (2014-2020), and continued to learn more languages and
-              frameworks in my college years (2021-2025). With experience in web
+              frameworks in college years (2021-2025). With experience in web
               development in a government internship, and mobile development in
               the Capstone Project.
             </p>

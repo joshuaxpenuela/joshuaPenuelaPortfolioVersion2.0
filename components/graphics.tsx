@@ -122,13 +122,13 @@ export default function Graphics() {
   return (
     <section className='flex w-full flex-col items-center pb-24'>
       <div className='w-full text-black dark:text-white'>
-        <div className='flex flex-col gap-y-15 mt-40 mb-15 w-full border-b-3 border-zinc-800 pb-15'>
+        <div className='flex flex-col gap-y-15 mt-40 mb-15 w-full border-b-3 border-y-zinc-400 dark:border-zinc-800 pb-15'>
           <div className='animate-fade-in-up'>
             <h1 className='text-center text-5xl font-black'>Graphic Designs</h1>
           </div>
           <div className='animate-fade-in-up animation-delay-100'>
             <h4 className='text-center text-xl'>
-              Samples of my 7 year experience graphic designing
+              Samples of my 7 year experience in graphic designing
             </h4>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Graphics() {
             {GraphicDesigns.map(graphicimage => (
               <div
                 key={graphicimage.id}
-                className='aspect-square rounded-lg border-2 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity hover:scale-100'
+                className='aspect-square rounded-lg border-2 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity hover:scale-100 border-zinc-400 dark:border-zinc-800'
                 onClick={() => setSelectedImage(graphicimage)}
               >
                 <img 

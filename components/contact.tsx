@@ -1,5 +1,7 @@
-import { Link } from 'lucide-react'
-import React from 'react'
+'use client'
+
+import React, { useState, FormEvent, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 
 const socials = [
   {
@@ -10,7 +12,7 @@ const socials = [
     height: 35
   },
   {
-    name: 'Instragram',
+    name: 'Instagram',
     url: 'https://www.instagram.com/joshuaxpenuela',
     logo: 'logos/instagram.svg',
     width: 40,
@@ -40,6 +42,100 @@ const socials = [
 ]
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    from_name: '',
+    from_email: '',
+    message: ''
+  })
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    if (publicKey) {
+      emailjs.init(publicKey)
+      console.log('EmailJS initialized')
+    } else {
+      console.error('EmailJS Public Key is missing!')
+    }
+  }, [])
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setStatus('sending')
+    setErrorMessage('')
+
+    console.log('Service ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID)
+    console.log('Public Key exists:', !!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+    const templateId = 'template_a7sg6ea'
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+    // Validation
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('error')
+      setErrorMessage('Configuration error. Please check environment variables.')
+      console.error('Missing configuration:', { serviceId, templateId, publicKey: !!publicKey })
+      return
+    }
+
+    try {
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.from_name,
+          from_email: formData.from_email,
+          message: formData.message,
+          to_email: 'penuelajoshuaf@gmail.com'
+        },
+        publicKey
+      )
+
+      console.log('EmailJS Success:', result)
+
+      if (result.status === 200) {
+        setStatus('success')
+        setFormData({ from_name: '', from_email: '', message: '' })
+        setTimeout(() => setStatus('idle'), 5000)
+      }
+    } catch (error: any) {
+      console.error('EmailJS Error Details:', {
+        error,
+        text: error?.text,
+        status: error?.status,
+        message: error?.message,
+        stringified: JSON.stringify(error)
+      })
+      
+      setStatus('error')
+      
+      // More specific error messages
+      if (error?.text) {
+        setErrorMessage(`Error: ${error.text}`)
+      } else if (error?.status === 400) {
+        setErrorMessage('Invalid request. Please check your template configuration.')
+      } else if (error?.status === 401) {
+        setErrorMessage('Authentication failed. Please check your EmailJS credentials.')
+      } else if (error?.status === 404) {
+        setErrorMessage('Service or template not found. Please verify your IDs.')
+      } else {
+        setErrorMessage('Failed to send message. Please try again or contact me directly.')
+      }
+      
+      setTimeout(() => setStatus('idle'), 5000)
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
   return (
     <section className='my-15 mt-20 w-full px-4'>
       <div className='w-full'>
@@ -49,11 +145,81 @@ export default function Contact() {
           </h1>
         </div>
         <div className='grid w-full grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 py-8 lg:py-15'>
-          {/* Left Side - Email Notice */}
-          <div className='mx-4 sm:mx-8 lg:mx-40 justify-items-center-safe border-2 rounded-2xl place-content-center p-6 sm:p-8'>
-            <div className='text-base sm:text-lg lg:text-xl text-center text-wrap'>
-              <p>Email Form is currently not available due to limited budget to own a personal domain. Sorry for the inconvenience and thank you for your patience.</p>
-            </div>
+          {/* Left Side - Contact Form */}
+          <div className='mx-4 sm:mx-8 lg:mx-40 justify-items-center-safe border-2 rounded-2xl p-6 sm:p-8 border-zinc-400 dark:border-zinc-600'>
+            <form onSubmit={handleSubmit} className='w-full space-y-4'>
+              <div>
+                <h1 className='w-full text-center text-3xl font-bold pb-5'>Send me an email!</h1>
+                <label htmlFor='from_name' className='block text-sm font-medium mb-2'>
+                  Name
+                </label>
+                <input
+                  type='text'
+                  id='from_name'
+                  name='from_name'
+                  value={formData.from_name}
+                  onChange={handleChange}
+                  required
+                  className='w-full px-4 py-2 border-2 border-zinc-300 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-600'
+                  placeholder='John Doe'
+                  disabled={status === 'sending'}
+                />
+              </div>
+
+              <div>
+                <label htmlFor='from_email' className='block text-sm font-medium mb-2'>
+                  Email
+                </label>
+                <input
+                  type='email'
+                  id='from_email'
+                  name='from_email'
+                  value={formData.from_email}
+                  onChange={handleChange}
+                  required
+                  className='w-full px-4 py-2 border-2 border-zinc-300 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-600'
+                  placeholder='john.doe@email.com'
+                  disabled={status === 'sending'}
+                />
+              </div>
+
+              <div>
+                <label htmlFor='message' className='block text-sm font-medium mb-2'>
+                  Message
+                </label>
+                <textarea
+                  id='message'
+                  name='message'
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className='w-full px-4 py-2 border-2 border-zinc-300 dark:border-zinc-800 rounded-lg bg-transparent focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-600 resize-none'
+                  placeholder='Your message...'
+                  disabled={status === 'sending'}
+                />
+              </div>
+
+              <button
+                type='submit'
+                disabled={status === 'sending'}
+                className='w-full py-3 px-6 border-zinc-600 dark:border-zinc-600 border-2 dark:hover:bg-zinc-800 hover:bg-zinc-200 disabled:bg-gray-500 text-black dark:text-white font-semibold rounded-lg transition-colors duration-150 cursor-pointer'
+              >
+                {status === 'sending' ? 'Sending...' : 'Send Message'}
+              </button>
+
+              {status === 'success' && (
+                <div className='p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-200 rounded-lg text-center'>
+                  Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className='p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-200 rounded-lg text-center'>
+                  {errorMessage}
+                </div>
+              )}
+            </form>
           </div>
 
           {/* Right Side - Social Links */}
