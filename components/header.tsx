@@ -14,8 +14,8 @@ export default function Header() {
 
   const pages = [
     { name: 'Home', path: '/' },
-    { name: 'Software Dev', path: '/projects' },
-    { name: 'Graphics', path: '/graphics' },
+    { name: 'Software Projects', path: '/projects' },
+    { name: 'Graphic Designs', path: '/graphics' },
   ]
 
   const externalLinks = [

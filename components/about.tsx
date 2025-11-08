@@ -41,7 +41,7 @@ export default function About() {
                   className='relative flex h-full w-full shrink-0 items-center justify-center'
                 >
                   {/* Image Container */}
-                  <div className='relative h-full w-full rounded-xl border-2 border-zinc-400/50 bg-transparent'>
+                  <div className='relative h-full w-full rounded-xl border-2 border-zinc-400/50 bg-zinc-950'>
                     <Image
                       src={slide.src}
                       alt={slide.alt}

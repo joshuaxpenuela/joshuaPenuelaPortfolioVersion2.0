@@ -4,21 +4,26 @@ import Hero from '@/components/hero'
 import About from '@/components/about'
 import Software from '@/components/software'
 import Contact from '@/components/contact'
+import { ShootingStars } from '@/components/ui/shooting-stars'
+import { StarsBackground } from '@/components/ui/stars-background'
 
 export const Home = () => {
   return (
-    <section className='mx-auto w-full'>
-      <div className='mx-auto flex flex-col'>
-        <div>
-          <Hero />
-          <div className='bg-'>
-            <About />
-            <Software />
-            <Github />
-            <Contact />
-          </div>
-        </div>
+    <section className="relative w-full h-full overflow-hidden">
+      {/* --- Background Layers --- */}
+      <div className="fixed inset-0 -z-10">
+        <StarsBackground className="bg-scroll" />
+        <ShootingStars className="bg-scroll" />
       </div>
+
+      {/* --- Foreground Content --- */}
+      <div className="relative z-10 mx-auto flex flex-col">
+        <Hero />
+        <About />
+        <Software />
+        <Github />
+        <Contact />
+      </div>  
     </section>
   )
 }
