@@ -18,7 +18,7 @@ export default function About() {
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
 
   return (
-    <section className='mt-12 flex w-full flex-col gap-y-6 sm:mt-16 sm:gap-y-8 md:mt-20 md:gap-y-10'>
+    <section className='mt-12 flex w-full flex-col gap-y-6 sm:mt-16 sm:gap-y-8 md:mt-20 md:gap-y-10 font-normal'>
       {/* Header */}
       <div className='animate-fade-in-down my-6 flex w-full justify-center sm:my-8 md:my-10'>
         <h1 className='text-3xl font-bold sm:text-4xl'>About Me</h1>
@@ -142,7 +142,7 @@ export default function About() {
               the Capstone Project.
             </p>
 
-            <p className='mt-5 dark:text-zinc-300'>Aside from Tech, I'm also interested in Science, Film, Journalism, Politics, History, and Music!</p>
+            <p className='mt-5 dark:text-zinc-300'>Aside from Tech, I'm also interested in Science, Journalism, Politics, Film, History, Arts, and Music!</p>
           </div>
         </div>
       </div>
