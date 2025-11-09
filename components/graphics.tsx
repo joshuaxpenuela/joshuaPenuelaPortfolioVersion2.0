@@ -93,10 +93,35 @@ const GraphicDesigns = [
     name: 'img',
     image: 'graphicpics/graphics15.png',
     software: ''
-  },{
+  },
+  {
     id: 16,
     name: 'img',
     image: 'graphicpics/graphics16.png',
+    software: ''
+  },
+  {
+    id: 17,
+    name: 'img',
+    image: 'graphicpics/graphics17.png',
+    software: ''
+  },
+  {
+    id: 18,
+    name: 'img',
+    image: 'graphicpics/graphics18.png',
+    software: ''
+  },
+  {
+    id: 19,
+    name: 'img',
+    image: 'graphicpics/graphics19.png',
+    software: ''
+  },
+  {
+    id: 20,
+    name: 'img',
+    image: 'graphicpics/graphics20.png',
     software: ''
   }
 ]
