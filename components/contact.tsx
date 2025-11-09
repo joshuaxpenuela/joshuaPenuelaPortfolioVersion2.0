@@ -19,9 +19,9 @@ const socials = [
     height: 40
   },
   {
-    name: 'Gmail',
-    url: 'mailto:penuelajoshuaf@gmail.com',
-    logo: 'logos/gmail.svg',
+    name: 'Tiktok',
+    url: 'https://www.tiktok.com/@joshuaxpenuela',
+    logo: 'logos/tiktok.svg',
     width: 40,
     height: 40
   },
@@ -221,7 +221,7 @@ export default function Contact() {
               )}
             </form>
           </div>
-
+          
           {/* Right Side - Social Links */}
           <div className='grid grid-rows-auto mx-4 sm:mx-8 lg:mx-40 justify-items-center-safe gap-y-6 lg:gap-y-15'>
             <div>

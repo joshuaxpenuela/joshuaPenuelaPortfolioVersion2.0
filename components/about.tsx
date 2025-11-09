@@ -18,18 +18,18 @@ export default function About() {
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
 
   return (
-    <section className='mt-12 sm:mt-16 md:mt-20 flex w-full flex-col gap-y-6 sm:gap-y-8 md:gap-y-10'>
+    <section className='mt-12 flex w-full flex-col gap-y-6 sm:mt-16 sm:gap-y-8 md:mt-20 md:gap-y-10'>
       {/* Header */}
-      <div className='my-6 sm:my-8 md:my-10 flex w-full justify-center animate-fade-in-down'>
-        <h1 className='text-3xl sm:text-4xl font-bold'>About Me</h1>
+      <div className='animate-fade-in-down my-6 flex w-full justify-center sm:my-8 md:my-10'>
+        <h1 className='text-3xl font-bold sm:text-4xl'>About Me</h1>
       </div>
 
       {/* Main Content Grid */}
-      <div className='max-w-8xl mx-auto mb-6 sm:mb-8 md:mb-10 grid grid-cols-1 gap-8 md:gap-5 lg:gap-45 px-4 lg:grid-cols-2 lg:px-8'>
+      <div className='max-w-8xl mx-auto mb-6 grid grid-cols-1 gap-8 px-4 sm:mb-8 md:mb-10 md:gap-5 lg:grid-cols-2 lg:gap-45 lg:px-8'>
         {/* Left Side - Image Slider */}
-        <div className='flex w-full items-center justify-center animate-fade-in-left'>
+        <div className='animate-fade-in-left flex w-full items-center justify-center'>
           {/* Slider Container */}
-          <div className='relative h-[400px] sm:h-[480px] md:h-[540px] w-full max-w-[650px] overflow-hidden'>
+          <div className='relative h-[400px] w-full max-w-[650px] overflow-hidden sm:h-[480px] md:h-[540px]'>
             {/* Slider Wrapper */}
             <div
               className='flex h-full transition-transform duration-300 ease-in-out'
@@ -56,14 +56,14 @@ export default function About() {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className='absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 sm:p-3 text-white text-xl sm:text-2xl transition-all hover:bg-black/70 hover:scale-110 cursor-pointer'
+              className='absolute top-1/2 left-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-black/40 p-2 text-xl text-white transition-all hover:scale-110 hover:bg-black/70 sm:p-3 sm:text-2xl'
               aria-label='Previous slide'
             >
               ‹
             </button>
             <button
               onClick={nextSlide}
-              className='absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded bg-black/50 p-2 sm:p-3 text-white text-xl sm:text-2xl transition-all hover:bg-black/70 hover:scale-110 cursor-pointer'
+              className='absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-black/40 p-2 text-xl text-white transition-all hover:scale-110 hover:bg-black/70 sm:p-3 sm:text-2xl'
               aria-label='Next slide'
             >
               ›
@@ -75,8 +75,10 @@ export default function About() {
                 <button
                   key={idx}
                   onClick={() => setCurrent(idx)}
-                  className={`h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full transition-all duration-300 ${
-                    current === idx ? 'bg-white scale-110' : 'bg-gray-500 hover:bg-gray-400'
+                  className={`h-2.5 w-2.5 rounded-full transition-all duration-300 sm:h-3 sm:w-3 ${
+                    current === idx
+                      ? 'scale-110 bg-white'
+                      : 'bg-gray-500 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -86,12 +88,12 @@ export default function About() {
         </div>
 
         {/* Right Side*/}
-        <div className='flex items-center justify-center px-4 animate-fade-in-right'>
+        <div className='animate-fade-in-right flex items-center justify-center px-4'>
           <div className='max-w-xl'>
-            <h1 className='text-2xl sm:text-3xl font-bold lg:text-4xl'>
+            <h1 className='text-2xl font-bold sm:text-3xl lg:text-4xl'>
               JOSHUA FAMADICO PENUELA
             </h1>
-            <div className='flex items-center gap-2 mt-2'>
+            <div className='mt-2 flex items-center gap-2'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -112,14 +114,20 @@ export default function About() {
                 />
               </svg>
 
-              <a href='https://www.google.com/maps/place/Dasmari%C3%B1as,+Cavite/@14.3063958,120.925758,16887m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3397d5b87c111e25:0xab8cb698f840321f!8m2!3d14.3338498!4d120.9542344!16zL20vMDJyMzVm?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D' target='_none' className='text-base sm:text-lg md:text-xl hover:underline'><i>Dasmariñas City, Cavite, Philippines</i></a>
+              <a
+                href='https://www.google.com/maps/place/Dasmari%C3%B1as,+Cavite/@14.3063958,120.925758,16887m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3397d5b87c111e25:0xab8cb698f840321f!8m2!3d14.3338498!4d120.9542344!16zL20vMDJyMzVm?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D'
+                target='_none'
+                className='text-base hover:underline sm:text-lg md:text-xl'
+              >
+                <i>Dasmariñas City, Cavite, Philippines</i>
+              </a>
             </div>
-            <p className='mt-3 text-justify text-sm sm:text-base leading-relaxed'>
+            <p className='mt-5 text-justify text-sm leading-relaxed sm:text-base dark:text-zinc-300'>
               A <i>Magna Cum Laude</i> graduate of the BS Information Technology
               program at{' '}
               <a
                 href='https://cvsu.edu.ph/'
-                className='font-bold hover:underline'
+                className='font-bold text-white hover:underline'
                 target='_blank'
               >
                 {' '}
@@ -133,6 +141,8 @@ export default function About() {
               development in a government internship, and mobile development in
               the Capstone Project.
             </p>
+
+            <p className='mt-5 dark:text-zinc-300'>Aside from Tech, I'm also interested in Science, Film, Journalism, Politics, History, and Music!</p>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ export default function Hero() {
               <div className='my-5 md:my-5 animate-fade-in-up animation-delay-400'>
                 <button
                   type='button' onClick={() =>window.open('/misc/2025 Joshua Famadico Penuela Resume.pdf', '_blank')}
-                  className='group relative cursor-pointer overflow-hidden rounded-xl border-3 border-zinc-900 p-3 px-8 sm:px-10 text-sm sm:text-base text-zinc-900 transition-colors duration-50 hover:text-white dark:border-zinc-700 dark:text-zinc-200'
+                  className='group relative cursor-pointer overflow-hidden rounded-xl border-3 border-zinc-900 p-3 px-8 sm:px-10 text-sm sm:text-base text-zinc-900 transition-colors duration-50 bg-white dark:bg-zinc-950 hover:text-white dark:border-zinc-700 dark:text-zinc-200'
                 >
                   <span className='relative z-10'>Download CV</span>
                   {/* sliding background */}
