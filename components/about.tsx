@@ -26,11 +26,8 @@ export default function About() {
 
       {/* Main Content Grid */}
       <div className='max-w-8xl mx-auto mb-6 grid grid-cols-1 gap-8 px-4 sm:mb-8 md:mb-10 md:gap-5 lg:grid-cols-2 lg:gap-45 lg:px-8'>
-        {/* Left Side - Image Slider */}
         <div className='animate-fade-in-left flex w-full items-center justify-center'>
-          {/* Slider Container */}
           <div className='relative h-[400px] w-full max-w-[650px] overflow-hidden sm:h-[480px] md:h-[540px]'>
-            {/* Slider Wrapper */}
             <div
               className='flex h-full transition-transform duration-300 ease-in-out'
               style={{ transform: `translateX(-${current * 100}%)` }}

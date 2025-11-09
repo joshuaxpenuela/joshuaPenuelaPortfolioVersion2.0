@@ -10,13 +10,13 @@ import { StarsBackground } from '@/components/ui/stars-background'
 export const Home = () => {
   return (
     <section className="relative w-full h-full overflow-hidden">
-      {/* --- Background Layers --- */}
+      {/* --- Background --- */}
       <div className="fixed inset-0 -z-10">
         <StarsBackground className="bg-scroll" />
         <ShootingStars className="bg-scroll" />
       </div>
 
-      {/* --- Foreground Content --- */}
+      {/* --- Foreground --- */}
       <div className="relative z-10 mx-auto flex flex-col">
         <Hero />
         <About />

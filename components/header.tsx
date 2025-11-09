@@ -27,14 +27,12 @@ export default function Header() {
   return (
     <header className='bg-background/5 fixed inset-x-0 top-0 z-50 border-b-2 py-4 backdrop-blur-xl border-gray-800/50 dark:border-gray-400/50'>
       <nav className='container mx-auto flex items-center justify-between px-4 sm:px-6 antialiased'>
-        {/* Left Section: Logo + Links */}
+        {/* Left Section Desktop */}
         <div className='flex items-center gap-6 lg:gap-20'>
-          {/* Logo */}
           <Link href='/' className='font-sans text-xl sm:text-2xl font-bold'>
             Joshy.
           </Link>
 
-          {/* Desktop Navigation Links */}
           <ul className='text-muted-foreground hidden md:flex items-center gap-4 lg:gap-6 xl:gap-10 text-sm font-light'>
             {pages.map(page => (
               <li
@@ -49,7 +47,7 @@ export default function Header() {
           </ul>
         </div>
 
-        {/* Right Section: Desktop External Links + Theme Toggle */}
+        {/* Right Section Desktop */}
         <div className='hidden md:flex items-center gap-3 lg:gap-4'>
           {externalLinks.map(link => (
             <Link key={link.name} href={link.href} target='_blank' rel='noopener noreferrer' className='group flex gap-1 text-sm font-bold text-black dark:text-white'
@@ -75,19 +73,16 @@ export default function Header() {
             aria-label='Toggle menu'
           >
             <div className='relative w-6 h-6 cursor-pointer'>
-              {/* Top line */}
               <span
                 className={`absolute left-0 h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
                   mobileMenuOpen ? 'top-3 rotate-45' : 'top-1'
                 }`}
               />
-              {/* Middle line */}
               <span
                 className={`absolute left-0 top-3 h-0.5 w-6 bg-current transition-all duration-300 ease-in-out ${
                   mobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
-              {/* Bottom line */}
               <span
                 className={`absolute left-0 h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
                   mobileMenuOpen ? 'top-3 -rotate-45' : 'top-5'

@@ -73,7 +73,6 @@ export default function Contact() {
     const templateId = 'template_a7sg6ea'
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 
-    // Validation
     if (!serviceId || !templateId || !publicKey) {
       setStatus('error')
       setErrorMessage('Configuration error. Please check environment variables.')

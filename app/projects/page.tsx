@@ -13,7 +13,7 @@ export const ProjectsPage = () => {
         <ShootingStars className='bg-scroll' />
       </div>
 
-      {/* --- Foreground Content --- */}
+      {/* --- Foreground --- */}
       <div className='relative z-10 mx-auto flex flex-col'>
         <Projects />
       </div>

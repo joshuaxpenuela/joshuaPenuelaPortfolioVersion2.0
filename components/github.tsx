@@ -24,7 +24,6 @@ export default function GithubStats() {
     stats ? (
       <span>{value}</span>
     ) : (
-      // Tailwind-based spinner
       <span
         className='h-4 w-4 animate-spin rounded-full border-2 border-zinc-400 border-t-transparent'
         aria-label='Loading'

@@ -7,7 +7,6 @@ import Providers from '@/components/providers'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 
-// ✅ Poppins as your only font
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -29,9 +28,9 @@ export default function RootLayout({
       <body
         className={cn(
           'flex min-h-screen flex-col antialiased',
-          poppins.variable // ✅ globally active font
+          poppins.variable
         )}
-        style={{ fontFamily: 'var(--font-poppins), sans-serif' }} // ✅ base font
+        style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
       >
         <Providers>
           <Header />

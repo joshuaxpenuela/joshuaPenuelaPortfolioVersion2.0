@@ -8,7 +8,7 @@ export default function Hero() {
     <section className='flex flex-col items-start pt-20 sm:pt-24 pb-12 sm:pb-16 md:pb-20 lg:pb-24 md:flex-row md:items-center md:pt-0'>
       <div className='grid w-full grid-cols-1 md:grid-cols-2 justify-between gap-6 md:gap-4 dark:text-white'>
         
-        {/* Hero left side - Text (order-2 on mobile, order-1 on desktop) */}
+        {/* Left side */}
         <div className='order-2 md:order-1 flex items-center justify-center md:place-items-center-safe py-8 sm:py-12 md:py-40 lg:py-80 px-4 sm:px-6'>
           <div className='text-center md:text-left'>
             <div className='space-y-2'>
@@ -37,7 +37,7 @@ export default function Hero() {
           </div>
         </div>
         
-        {/* Hero right side - Image (order-1 on mobile, order-2 on desktop) */}
+        {/* Right Side*/}
         <div className='order-1 md:order-2 flex items-center justify-center md:place-items-center-safe px-4 sm:px-6 md:px-0'>
           <div className='relative mx-auto w-full max-w-sm sm:max-w-md md:max-w-none md:w-fit animate-fade-in animation-delay-200'>
             {/* Image */}
