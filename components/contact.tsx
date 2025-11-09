@@ -224,7 +224,7 @@ export default function Contact() {
           {/* Right Side - Social Links */}
           <div className='grid grid-rows-auto mx-4 sm:mx-8 lg:mx-40 justify-items-center-safe gap-y-6 lg:gap-y-15'>
             <div>
-              <h1 className='font-bold text-xl sm:text-2xl lg:text-3xl text-center'>Follow me on these accounts</h1>
+              <h1 className='font-bold text-xl sm:text-2xl lg:text-3xl text-center'>Message me on these accounts</h1>
             </div>
             <div className='hover:bg-900 w-full cursor-pointer justify-between'>
               <div className='grid gap-y-4 sm:gap-y-6 lg:gap-y-10'>
