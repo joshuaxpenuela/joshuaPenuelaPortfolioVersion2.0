@@ -1,9 +1,33 @@
-'use client'
+ 'use client'
 
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
 
 const GraphicDesigns = [
+  {
+    id: 17,
+    name: 'img',
+    image: 'graphicpics/graphics17.png',
+    software: ''
+  },
+  {
+    id: 18,
+    name: 'img',
+    image: 'graphicpics/graphics18.png',
+    software: ''
+  },
+  {
+    id: 19,
+    name: 'img',
+    image: 'graphicpics/graphics19.png',
+    software: ''
+  },
+  {
+    id: 20,
+    name: 'img',
+    image: 'graphicpics/graphics20.png',
+    software: ''
+  },
   {
     id: 1,
     name: 'img',
@@ -98,30 +122,6 @@ const GraphicDesigns = [
     id: 16,
     name: 'img',
     image: 'graphicpics/graphics16.png',
-    software: ''
-  },
-  {
-    id: 17,
-    name: 'img',
-    image: 'graphicpics/graphics17.png',
-    software: ''
-  },
-  {
-    id: 18,
-    name: 'img',
-    image: 'graphicpics/graphics18.png',
-    software: ''
-  },
-  {
-    id: 19,
-    name: 'img',
-    image: 'graphicpics/graphics19.png',
-    software: ''
-  },
-  {
-    id: 20,
-    name: 'img',
-    image: 'graphicpics/graphics20.png',
     software: ''
   }
 ]
