@@ -159,7 +159,7 @@ export default function Graphics() {
           </div>
         </div>
         <div className='w-full pt-20 px-4 md:px-8 lg:px-40 animate-fade-in-up animation-delay-200'>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
             {GraphicDesigns.map(graphicimage => (
               <div
                 key={graphicimage.id}
@@ -180,7 +180,7 @@ export default function Graphics() {
       {/* Full Image Modal */}
       {selectedImage && (
         <div
-          className={`bg-opacity-90 fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 transition-opacity duration-300 ${
+          className={`bg-opacity-90 fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4 transition-opacity duration-300 ${
             isClosing ? 'opacity-0' : 'opacity-100'
           }`}
           onClick={handleClose}
