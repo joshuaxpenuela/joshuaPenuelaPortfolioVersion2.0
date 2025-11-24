@@ -123,6 +123,30 @@ const GraphicDesigns = [
     name: 'img',
     image: 'graphicpics/graphics16.png',
     software: ''
+  },
+ {
+    id: 21,
+    name: 'img',
+    image: 'graphicpics/graphics21.jpg',
+    software: ''
+  },
+ {
+    id: 22,
+    name: 'img',
+    image: 'graphicpics/graphics22.jpg',
+    software: ''
+  },
+ {
+    id: 23,
+    name: 'img',
+    image: 'graphicpics/graphics23.jpg',
+    software: ''
+  },
+ {
+    id: 24,
+    name: 'img',
+    image: 'graphicpics/graphics24.png',
+    software: ''
   }
 ]
 
