@@ -23,7 +23,7 @@ export default function Projects() {
     {
       id: 1,
       image: '',
-      name: 'TAIOS (TUPAD All-in-One System)',
+      name: 'TAIOS(TUPAD All-in-One System)',
       language: ['Laravel 12', 'Blade', 'Node.js', 'MySQL', 'Tailwind CSS'],
       description:
         'A system that centralized and digitized the TUPAD database and improving the previous process speed by 90% for DOLE - Cavite Provincial Office.'
@@ -87,7 +87,7 @@ export default function Projects() {
                 key={project.id}
                 className='rounded-md border-2 border-gray-800/50 dark:border-gray-400/50 p-5 dark:bg-zinc-950/80 backdrop-blur-sm dark:hover:bg-zinc-900 hover:bg-gray-300/50 cursor-pointer transition-all'
               >
-                <h1 className='text-3xl md:text-3xl font-bold'>{project.name}</h1>
+                <h1 className='text-2xl md:text-2xl font-bold'>{project.name}</h1>
 
                 {/* Language Badges */}
                 <div className='my-3 flex flex-wrap gap-2'>
