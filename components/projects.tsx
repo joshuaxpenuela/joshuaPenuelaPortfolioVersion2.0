@@ -7,6 +7,7 @@ export default function Projects() {
     Blade: 'bg-red-500/20 text-red-700 dark:text-red-300',
     MySQL: 'bg-orange-500/20 text-orange-700 dark:text-orange-300',
     'Tailwind CSS': 'bg-cyan-500/20 text-cyan-700 dark:text-cyan-300',
+    TypeScript: 'bg-blue-500/20 text-blue-700 dark:text-blue-300',
     Kotlin: 'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300',
     React: 'bg-blue-500/20 text-blue-700 dark:text-blue-300',
     PHP: 'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300',
@@ -22,10 +23,10 @@ export default function Projects() {
     {
       id: 1,
       image: '',
-      name: 'TAIOS',
+      name: 'TAIOS (TUPAD All-in-One System)',
       language: ['Laravel 12', 'Blade', 'Node.js', 'MySQL', 'Tailwind CSS'],
       description:
-        'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
+        'A system that centralized and digitized the TUPAD database and improving the previous process speed by 90% for DOLE - Cavite Provincial Office.'
     },
     {
       id: 2,
@@ -33,7 +34,7 @@ export default function Projects() {
       name: 'kITa',
       language: ['Java', 'Kotlin', 'PHP', 'MySQL', 'HTML', 'Bootstrap', 'JavaScript'],
       description:
-        'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
+        'A Web and Android Application Lost and Found System platform for the CvSU-Main community.'
     },
     {
       id: 3,
@@ -41,7 +42,7 @@ export default function Projects() {
       name: 'CvSU Merch Store',
       language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
       description:
-        'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
+        'Online platform for Kabsuhenyos to buy their most wanted merch of the university conveniently.'
     },
     {
       id: 4,
@@ -49,7 +50,15 @@ export default function Projects() {
       name: 'Rizal Museum',
       language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
       description:
-        'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
+        'A web platform about Jose Rizals life and works to promote Rizal awareness among Filipinos.'
+    },
+    {
+      id: 5,
+      image: '',
+      name: 'Personal Website',
+      language: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript'],
+      description:
+        'My personal portfolio website to showcase my skills, projects, and experiences.'
     }
   ]
 
@@ -78,7 +87,7 @@ export default function Projects() {
                 key={project.id}
                 className='rounded-md border-2 border-gray-800/50 dark:border-gray-400/50 p-5 dark:bg-zinc-950/80 backdrop-blur-sm dark:hover:bg-zinc-900 hover:bg-gray-300/50 cursor-pointer transition-all'
               >
-                <h1 className='text-2xl md:text-3xl font-bold'>{project.name}</h1>
+                <h1 className='text-3xl md:text-3xl font-bold'>{project.name}</h1>
 
                 {/* Language Badges */}
                 <div className='my-3 flex flex-wrap gap-2'>
