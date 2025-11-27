@@ -1,4 +1,4 @@
- 'use client'
+'use client'
 
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
@@ -124,25 +124,25 @@ const GraphicDesigns = [
     image: 'graphicpics/graphics16.png',
     software: ''
   },
- {
+  {
     id: 21,
     name: 'img',
     image: 'graphicpics/graphics21.jpg',
     software: ''
   },
- {
+  {
     id: 22,
     name: 'img',
     image: 'graphicpics/graphics22.jpg',
     software: ''
   },
- {
+  {
     id: 23,
     name: 'img',
     image: 'graphicpics/graphics23.jpg',
     software: ''
   },
- {
+  {
     id: 24,
     name: 'img',
     image: 'graphicpics/graphics24.png',
@@ -152,11 +152,11 @@ const GraphicDesigns = [
 
 export default function Graphics() {
   const [selectedImage, setSelectedImage] = useState<{
-  id: number
-  name: string
-  image: string
-  software: string
-} | null>(null)
+    id: number
+    name: string
+    image: string
+    software: string
+  } | null>(null)
 
   const [isClosing, setIsClosing] = useState(false)
 
@@ -171,29 +171,30 @@ export default function Graphics() {
   return (
     <section className='flex w-full flex-col items-center pb-24'>
       <div className='w-full text-black dark:text-white'>
-        <div className='flex flex-col gap-y-15 mt-40 mb-15 w-full border-b-3 border-y-zinc-400 dark:border-zinc-800 pb-15'>
+        <div className='mt-40 mb-15 flex w-full flex-col gap-y-15 border-b-3 border-y-zinc-400 pb-15 dark:border-zinc-800'>
           <div className='animate-fade-in-up sm:text-3xl'>
             <h1 className='text-center text-5xl font-black'>Graphic Designs</h1>
           </div>
-          <div className='flex flex-col gap-y-5 animate-fade-in-up animation-delay-100'>
+          <div className='animate-fade-in-up animation-delay-100 flex flex-col gap-y-5'>
             <h4 className='text-center text-xl'>
               Samples of my 7 year experience in graphic designing
             </h4>
-            <h4 className='text-center text-'>I'm also a UI/UX designer!</h4>
+            <h4 className='text- text-center'>I'm also a UI/UX designer!</h4>
           </div>
         </div>
-        <div className='w-full pt-20 px-4 md:px-8 lg:px-40 animate-fade-in-up animation-delay-200'>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+        <div className='animate-fade-in-up animation-delay-200 w-full px-4 pt-20 md:px-8 lg:px-40'>
+          {/* Bento Grid */}
+          <div className='columns-2 gap-6 space-y-6 md:columns-3 lg:columns-4'>
             {GraphicDesigns.map(graphicimage => (
               <div
                 key={graphicimage.id}
-                className='aspect-square rounded-lg border-2 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity hover:scale-100 border-zinc-400 dark:border-zinc-800'
+                className='cursor-pointer break-inside-avoid overflow-hidden rounded-xl border border-zinc-300 transition hover:opacity-65 dark:border-zinc-800'
                 onClick={() => setSelectedImage(graphicimage)}
               >
-                <img 
-                  src={graphicimage.image} 
+                <img
+                  src={graphicimage.image}
                   alt={graphicimage.name}
-                  className='w-full h-full object-cover'
+                  className='h-auto w-full object-cover'
                 />
               </div>
             ))}
@@ -210,7 +211,7 @@ export default function Graphics() {
           onClick={handleClose}
         >
           <button
-            className='absolute top-4 right-4 cursor-pointer text-white transition-colors hover:text-gray-300 z-10'
+            className='absolute top-4 right-4 z-10 cursor-pointer text-white transition-colors hover:text-gray-300'
             onClick={handleClose}
           >
             <X size={32} strokeWidth={2} />
@@ -219,7 +220,9 @@ export default function Graphics() {
             src={selectedImage.image}
             alt={selectedImage.name}
             className={`max-h-full max-w-full object-contain transition-all duration-300 ${
-              isClosing ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100 animate-slideUpFade'
+              isClosing
+                ? 'translate-y-8 opacity-0'
+                : 'animate-slideUpFade translate-y-0 opacity-100'
             }`}
             onClick={e => e.stopPropagation()}
           />
