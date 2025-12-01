@@ -7,145 +7,145 @@ const GraphicDesigns = [
   {
     id: 17,
     name: 'img',
-    image: '/graphicpics/graphics17.png',
+    image: 'graphicpics/graphics17.png',
     software: ''
   },
   {
     id: 18,
     name: 'img',
-    image: '/graphicpics/graphics18.png',
+    image: 'graphicpics/graphics18.png',
     software: ''
   },
   {
     id: 19,
     name: 'img',
-    image: '/graphicpics/graphics19.png',
+    image: 'graphicpics/graphics19.png',
     software: ''
   },
   {
     id: 20,
     name: 'img',
-    image: '/graphicpics/graphics20.png',
+    image: 'graphicpics/graphics20.png',
     software: ''
   },
   {
     id: 1,
     name: 'img',
-    image: '/graphicpics/graphics1.jpg',
+    image: 'graphicpics/graphics1.jpg',
     software: ''
   },
   {
     id: 2,
     name: 'img',
-    image: '/graphicpics/graphics2.png',
+    image: 'graphicpics/graphics2.png',
     software: ''
   },
   {
     id: 3,
     name: 'img',
-    image: '/graphicpics/graphics3.jpg',
+    image: 'graphicpics/graphics3.jpg',
     software: ''
   },
   {
     id: 4,
     name: 'img',
-    image: '/graphicpics/graphics4.png',
+    image: 'graphicpics/graphics4.png',
     software: ''
   },
   {
     id: 5,
     name: 'img',
-    image: '/graphicpics/graphics5.png',
+    image: 'graphicpics/graphics5.png',
     software: ''
   },
   {
     id: 6,
     name: 'img',
-    image: '/graphicpics/graphics6.jpg',
+    image: 'graphicpics/graphics6.jpg',
     software: ''
   },
   {
     id: 7,
     name: 'img',
-    image: '/graphicpics/graphics7.png',
+    image: 'graphicpics/graphics7.png',
     software: ''
   },
   {
     id: 8,
     name: 'img',
-    image: '/graphicpics/graphics8.png',
+    image: 'graphicpics/graphics8.png',
     software: ''
   },
   {
     id: 9,
     name: 'img',
-    image: '/graphicpics/graphics9.png',
+    image: 'graphicpics/graphics9.png',
     software: ''
   },
   {
     id: 10,
     name: 'img',
-    image: '/graphicpics/graphics10.png',
+    image: 'graphicpics/graphics10.png',
     software: ''
   },
   {
     id: 11,
     name: 'img',
-    image: '/graphicpics/graphics11.jpg',
+    image: 'graphicpics/graphics11.jpg',
     software: ''
   },
   {
     id: 12,
     name: 'img',
-    image: '/graphicpics/graphics12.png',
+    image: 'graphicpics/graphics12.png',
     software: ''
   },
   {
     id: 13,
     name: 'img',
-    image: '/graphicpics/graphics13.jpg',
+    image: 'graphicpics/graphics13.jpg',
     software: ''
   },
   {
     id: 14,
     name: 'img',
-    image: '/graphicpics/graphics14.png',
+    image: 'graphicpics/graphics14.png',
     software: ''
   },
   {
     id: 15,
     name: 'img',
-    image: '/graphicpics/graphics15.png',
+    image: 'graphicpics/graphics15.png',
     software: ''
   },
   {
     id: 16,
     name: 'img',
-    image: '/graphicpics/graphics16.png',
+    image: 'graphicpics/graphics16.png',
     software: ''
   },
   {
     id: 21,
     name: 'img',
-    image: '/graphicpics/graphics21.jpg',
+    image: 'graphicpics/graphics21.jpg',
     software: ''
   },
   {
     id: 22,
     name: 'img',
-    image: '/graphicpics/graphics22.jpg',
+    image: 'graphicpics/graphics22.jpg',
     software: ''
   },
   {
     id: 23,
     name: 'img',
-    image: '/graphicpics/graphics23.jpg',
+    image: 'graphicpics/graphics23.jpg',
     software: ''
   },
   {
     id: 24,
     name: 'img',
-    image: '/graphicpics/graphics24.png',
+    image: 'graphicpics/graphics24.png',
     software: ''
   }
 ]
@@ -159,18 +159,20 @@ export default function Graphics() {
   } | null>(null)
 
   const [isClosing, setIsClosing] = useState(false)
-
-  // Track loading state for each image
-  const [loadedImages, setLoadedImages] = useState<{ [key: number]: boolean }>(
-    {}
-  )
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set())
+  const [modalImageLoaded, setModalImageLoaded] = useState(false)
 
   const handleClose = () => {
     setIsClosing(true)
     setTimeout(() => {
       setSelectedImage(null)
       setIsClosing(false)
+      setModalImageLoaded(false)
     }, 300)
+  }
+
+  const handleImageLoad = (id: number) => {
+    setLoadedImages(prev => new Set(prev).add(id))
   }
 
   return (
@@ -184,36 +186,31 @@ export default function Graphics() {
             <h4 className='text-center text-xl'>
               Samples of my 7 year experience in graphic designing
             </h4>
-            <h4 className='text-center'>I'm also a UI/UX designer!</h4>
+            <h4 className='text- text-center'>I'm also a UI/UX designer!</h4>
           </div>
         </div>
-
         <div className='animate-fade-in-up animation-delay-200 w-full px-4 pt-20 md:px-8 lg:px-40'>
           {/* Bento Grid */}
           <div className='columns-2 gap-6 space-y-6 md:columns-3 lg:columns-4'>
-            {GraphicDesigns.map(graphic => (
+            {GraphicDesigns.map(graphicimage => (
               <div
-                key={graphic.id}
-                className='cursor-pointer break-inside-avoid overflow-hidden rounded-xl border border-zinc-300 transition hover:opacity-65 dark:border-zinc-800 relative'
-                onClick={() => setSelectedImage(graphic)}
+                key={graphicimage.id}
+                className='cursor-pointer break-inside-avoid overflow-hidden rounded-xl border border-zinc-300 transition hover:opacity-65 dark:border-zinc-800'
+                onClick={() => setSelectedImage(graphicimage)}
               >
-                {/* Spinner */}
-                {!loadedImages[graphic.id] && (
-                  <div className='absolute inset-0 flex items-center justify-center bg-black/10 dark:bg-black/30'>
-                    <div className='h-8 w-8 animate-spin rounded-full border-2 border-zinc-400 border-t-transparent' />
-                  </div>
-                )}
-
-                <img
-                  src={graphic.image}
-                  alt={graphic.name}
-                  className={`h-auto w-full object-cover transition-opacity duration-300 ${
-                    loadedImages[graphic.id] ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  onLoad={() =>
-                    setLoadedImages(prev => ({ ...prev, [graphic.id]: true }))
-                  }
-                />
+                <div className='relative'>
+                  {!loadedImages.has(graphicimage.id) && (
+                    <div className='absolute inset-0 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900'>
+                      <div className='h-8 w-8 animate-spin rounded-full border-4 border-zinc-300 border-t-zinc-600 dark:border-zinc-700 dark:border-t-zinc-400'></div>
+                    </div>
+                  )}
+                  <img
+                    src={graphicimage.image}
+                    alt={graphicimage.name}
+                    className='h-auto w-full object-cover'
+                    onLoad={() => handleImageLoad(graphicimage.id)}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -234,6 +231,11 @@ export default function Graphics() {
           >
             <X size={32} strokeWidth={2} />
           </button>
+          {!modalImageLoaded && (
+            <div className='absolute inset-0 flex items-center justify-center'>
+              <div className='h-12 w-12 animate-spin rounded-full border-4 border-zinc-600 border-t-white'></div>
+            </div>
+          )}
           <img
             src={selectedImage.image}
             alt={selectedImage.name}
@@ -243,6 +245,7 @@ export default function Graphics() {
                 : 'animate-slideUpFade translate-y-0 opacity-100'
             }`}
             onClick={e => e.stopPropagation()}
+            onLoad={() => setModalImageLoaded(true)}
           />
         </div>
       )}
