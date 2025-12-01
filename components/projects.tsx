@@ -36,7 +36,7 @@ export default function Projects() {
       name: 'TAIOS',
       language: ['Laravel 12', 'Blade', 'Node.js', 'MySQL', 'Tailwind CSS'],
       description:
-        'TUPAD All-in-One System is a that centralized and digitized the TUPAD database and improving the previous process speed by 90% for DOLE - Cavite Provincial Office.'
+        'TUPAD All-in-One System is a platform that centralized and digitized the TUPAD database and improving the previous process speed by 90% for DOLE - Cavite Provincial Office.'
     },
     {
       id: 2,
@@ -64,11 +64,19 @@ export default function Projects() {
     },
     {
       id: 4,
-      images: [],
+      images: [
+        'projectspics/RizalMuseum(1).png',
+        'projectspics/RizalMuseum(2).png',
+        'projectspics/RizalMuseum(3).png',
+        'projectspics/RizalMuseum(4).png',
+        'projectspics/RizalMuseum(5).png',
+        'projectspics/RizalMuseum(6).png',
+        'projectspics/RizalMuseum(7).png'
+      ],
       name: 'Rizal Museum',
       language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
       description:
-        'A web platform about Jose Rizals life and works to promote Rizal awareness among Filipinos.'
+        "A web platform that shows the life and works of the Philippine's national hero, Dr. Jose Rizal."
     },
     {
       id: 5,
@@ -135,7 +143,7 @@ function ProjectCard({
     <div className='cursor-pointer rounded-md border-2 border-gray-800/50 p-5 backdrop-blur-sm transition-all hover:bg-gray-300/50 dark:border-gray-400/50 dark:bg-zinc-950/80 dark:hover:bg-zinc-900'>
       {/* Image Slider */}
       {project.images.length > 0 && (
-        <div className='relative my-2 h-[200px] w-full overflow-hidden rounded-xl border-2'>
+        <div className='relative my-2 w-full overflow-hidden rounded-xl border-2'>
           <div
             className='flex h-full transition-transform duration-300 ease-in-out'
             style={{ transform: `translateX(-${current * 100}%)` }}
@@ -143,7 +151,7 @@ function ProjectCard({
             {project.images.map((image: string, index: number) => (
               <div
                 key={index}
-                className='relative flex h-full w-full shrink-0 items-center justify-center bg-zinc-950'
+                className='relative flex h-full w-full shrink-0 items-center justify-center backdrop-blur-xl'
               >
                 <img
                   src={image}
@@ -196,7 +204,7 @@ function ProjectCard({
         ))}
       </div>
 
-      <p className='text-sm md:text-base'>{project.description}</p>
+      <p className='text-justify text-sm md:text-base'>{project.description}</p>
     </div>
   )
 }
