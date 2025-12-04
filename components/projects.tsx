@@ -40,7 +40,9 @@ export default function Projects() {
     },
     {
       id: 2,
-      images: [],
+      images: [
+        ''
+      ],
       name: 'kITa',
       language: [
         'Java',
