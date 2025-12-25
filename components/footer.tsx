@@ -45,7 +45,7 @@ export default function Footer() {
       name: 'penuelajoshuaf@gmail.com',
       href: 'mailto:penuelajoshuaf@gmail.com'
     },
-    { name: '+63-908-956-5218', href: 'tel:+639089565218' },
+    { name: '+63-962-284-9506', href: 'tel:+639622849506' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/joshuaxpenuela' }
   ]
 
