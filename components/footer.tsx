@@ -148,7 +148,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className='flex justify-center pt-6 sm:pt-8'>
           <p className='text-muted-foreground text-xs sm:text-sm font-bold text-center'>
-            &copy; 2025 Joshua Penuela. All rights reserved.
+            &copy; 2026 Joshua Penuela. All rights reserved.
           </p>
         </div>
       </div>
