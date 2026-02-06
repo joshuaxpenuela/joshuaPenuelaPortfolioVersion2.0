@@ -1,7 +1,7 @@
-import { getProjects } from '@/lib/projects'
-import Projects from '@/components/projects'
-import { ShootingStars } from '@/components/ui/shooting-stars'
-import { StarsBackground } from '@/components/ui/stars-background'
+import { getProjects } from '@/src/lib/projects'
+import Projects from '@/src/components/projects'
+import { ShootingStars } from '@/src/components/ui/shooting-stars'
+import { StarsBackground } from '@/src/components/ui/stars-background'
 
 import React from 'react'
 

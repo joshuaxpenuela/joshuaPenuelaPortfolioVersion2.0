@@ -1,11 +1,11 @@
 import React from 'react'
-import Github from '@/components/github'
-import Hero from '@/components/hero'
-import About from '@/components/about'
-import Software from '@/components/software'
-import Contact from '@/components/contact'
-import { ShootingStars } from '@/components/ui/shooting-stars'
-import { StarsBackground } from '@/components/ui/stars-background'
+import Github from '@/src/components/github'
+import Hero from '@/src/components/hero'
+import About from '@/src/components/about'
+import Software from '@/src/components/software'
+import Contact from '@/src/components/contact'
+import { ShootingStars } from '@/src/components/ui/shooting-stars'
+import { StarsBackground } from '@/src/components/ui/stars-background'
 
 export const Home = () => {
   return (

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import ThemeToggle from '@/components/theme-toggle'
+import ThemeToggle from '@/src/components/theme-toggle'
 
 export default function Header() {
   const currentPath = usePathname()
