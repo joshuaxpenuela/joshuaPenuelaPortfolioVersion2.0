@@ -37,7 +37,7 @@ export default function Footer() {
     { name: 'Web Development', href: '/#' },
     { name: 'Mobile Development', href: '/softwareDev' },
     { name: 'Graphics', href: '/graphics' },
-    { name: 'CV / Resume', href: 'misc/2025 Joshua Famadico Penuela Resume.pdf' }
+    { name: 'CV / Resume', href: 'misc/2026 Joshua Famadico Penuela Resume.pdf' }
   ]
 
   const contacts = [
