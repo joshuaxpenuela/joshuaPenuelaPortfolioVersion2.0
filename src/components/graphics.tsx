@@ -195,7 +195,7 @@ export default function Graphics() {
             {GraphicDesigns.map(graphicimage => (
               <div
                 key={graphicimage.id}
-                className='cursor-pointer break-inside-avoid overflow-hidden rounded-xl border border-zinc-300 transition hover:opacity-65 dark:border-zinc-800'
+                className='cursor-pointer break-inside-avoid overflow-hidden rounded-xl border border-zinc-300 transition hover:bg-zinc-950/50 dark:border-zinc-800'
                 onClick={() => setSelectedImage(graphicimage)}
               >
                 <div className='relative'>
@@ -204,6 +204,9 @@ export default function Graphics() {
                       <div className='h-8 w-8 animate-spin rounded-full border-4 border-zinc-300 border-t-zinc-600 dark:border-zinc-700 dark:border-t-zinc-400'></div>
                     </div>
                   )}
+
+                  <div className='absolute inset-0 z-10 bg-black/40 opacity-0 transition duration-400 hover:opacity-100' />
+
                   <img
                     src={graphicimage.image}
                     alt={graphicimage.name}
