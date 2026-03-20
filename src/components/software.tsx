@@ -12,6 +12,11 @@ const softwares = [
     name: 'React'
   },
   {
+    logo: 'logos/typescript.svg',
+    href: 'https://www.typescriptlang.org/',
+    name: 'TypeScript'
+  },
+  {
     logo: 'logos/tailwind.svg',
     href: 'https://tailwindcss.com/',
     name: 'TailwindCSS'
@@ -22,14 +27,24 @@ const softwares = [
     name: 'Node.js'
   },
   {
-    logo: 'logos/laravel.svg',
-    href: 'https://laravel.com/',
-    name: 'Laravel'
-  },
-  {
     logo: 'logos/npm.svg',
     href: 'https://www.npmjs.com/',
     name: 'npm'
+  },
+  {
+    logo: 'logos/javascript.svg',
+    href: 'https://www.javascript.com/',
+    name: 'JavaScript'
+  },
+  {
+    logo: 'logos/expo.svg',
+    href: 'https://expo.dev/',
+    name: 'Expo'
+  },
+  {
+    logo: 'logos/react.svg',
+    href: 'https://reactnative.dev/',
+    name: 'React Native'
   },
   {
     logo: 'logos/python.svg',
@@ -37,29 +52,14 @@ const softwares = [
     name: 'Python'
   },
   {
-    logo: 'logos/html.svg',
-    href: '###',
-    name: 'HTML5'
-  },
-  {
-    logo: 'logos/javascript.svg',
-    href: '###',
-    name: 'JavaScript'
-  },
-  {
-    logo: 'logos/php.svg',
-    href: 'https://www.php.net/',
-    name: 'PHP'
-  },
-  {
     logo: 'logos/mysql.svg',
     href: 'https://www.mysql.com/',
     name: 'MySQL'
   },
   {
-    logo: 'logos/typescript.svg',
-    href: 'https://www.typescriptlang.org/',
-    name: 'TypeScript'
+    logo: 'logos/supabase.svg',
+    href: 'https://supabase.com/',
+    name: 'Supabase'
   },
   {
     logo: 'logos/postman.svg',
@@ -125,7 +125,7 @@ export default function Software() {
                     <img
                       src={software.logo}
                       alt={software.name}
-                      className={`max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110 ${['Next.js', 'Vercel', 'Github'].includes(software.name) ? 'dark:invert-100' : ''}`}
+                      className={`max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110 ${['Next.js', 'Vercel', 'Github', 'Expo'].includes(software.name) ? 'dark:invert-100' : ''}`}
                     />
                   )}
                 </div>
