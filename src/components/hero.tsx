@@ -26,11 +26,11 @@ export default function Hero() {
               <div className='my-5 md:my-5 animate-fade-in-up animation-delay-400'>
                 <button
                   type='button' onClick={() =>window.open('/misc/2026 Joshua Famadico Penuela Resume.pdf', '_blank')}
-                  className='group relative cursor-pointer overflow-hidden rounded-xl border-3 border-zinc-900 p-3 px-8 sm:px-10 text-sm sm:text-base text-zinc-900 transition-colors duration-50 bg-white dark:bg-zinc-950 hover:text-white dark:border-zinc-700 dark:text-zinc-200'
+                  className='group relative cursor-pointer overflow-hidden rounded-4xl border-2 border-zinc-900 p-3 px-8 sm:px-10 text-sm sm:text-base text-zinc-900 font-bold transition-colors duration-50 bg-white dark:bg-zinc-950 hover:text-white dark:border-zinc-700 dark:text-zinc-200'
                 >
                   <span className='relative z-10'>Download CV</span>
                   {/* sliding background */}
-                  <span className='absolute inset-0 w-0 bg-zinc-900 transition-all duration-100 ease-linear group-hover:w-full dark:bg-zinc-800'></span>
+                  <span className='absolute inset-0 w-0 bg-zinc-900 group-hover:w-full dark:bg-zinc-800'></span>
                 </button>
               </div>
             </div>

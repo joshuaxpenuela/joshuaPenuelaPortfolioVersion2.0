@@ -36,7 +36,7 @@ export default function Projects() {
       name: 'TAIOS',
       language: ['Laravel 12', 'Blade', 'Node.js', 'MySQL', 'Tailwind CSS'],
       description:
-        'TUPAD All-in-One System is a platform that centralized and digitized the TUPAD database and improving the previous process speed by 90% for DOLE - Cavite Provincial Office.'
+        'TUPAD All-in-One System is a platform that centralized and digitized the TUPAD database and improving the previous manual process speed by 90% for DOLE - Cavite Provincial Office.'
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ export default function Projects() {
         'JavaScript'
       ],
       description:
-        'A Web and Android Application Lost and Found System platform for the CvSU-Main community.'
+        'Lost and Found Platform for users (Android App) and admins (Web Platform) to solve the scattered process and difficult experience of finding and surrendering lost items, and centralized the database and management of authorities.'
     },
     {
       id: 3,

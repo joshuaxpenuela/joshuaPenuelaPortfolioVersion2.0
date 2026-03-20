@@ -57,7 +57,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className='bg-background mt-12 sm:mt-20 border-t antialiased border-gray-800/50 dark:border-gray-400/50'>
+    <footer className='bg-linear-to-t from-white via-white to-zinc-300 dark:bg-linear-to-t dark:from-black dark:via-black dark:to-zinc-950 mt-12 sm:mt-20 border-t antialiased border-gray-800/50 dark:border-gray-400/50'>
       <div className='container mx-auto px-4 sm:px-6 py-6 sm:py-8'>
         <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:gap-16'>
           {/* Developed Using Section */}

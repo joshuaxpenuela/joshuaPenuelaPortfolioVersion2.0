@@ -118,7 +118,7 @@ export default function Software() {
                 href={software.href}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-3 sm:py-4 text-zinc-600 transition-transform duration-200 hover:scale-105 hover:bg-zinc-300 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-900 dark:hover:text-white'
+                className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-3 sm:py-4 text-zinc-600 transition-transform duration-200 hover:scale-105 hover:bg-zinc-300 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-900/80 dark:hover:text-white'
               >
                 <div className='flex h-[50px] w-[50px] sm:h-[60px] sm:w-[60px] items-center justify-center'>
                   {software.logo && (
