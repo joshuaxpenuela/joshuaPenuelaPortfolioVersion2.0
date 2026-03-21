@@ -44,6 +44,7 @@ export default function Hero() {
             <Image
               src={JoshyImage}
               alt='Joshy'
+              loading="eager"
               className='w-full pt-6 sm:pt-8 md:pt-10'
             />
 
