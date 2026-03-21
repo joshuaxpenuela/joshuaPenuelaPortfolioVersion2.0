@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Image from 'next/image'
+
 const softwares = [
   {
     logo: '/logos/nextjs.svg',
@@ -120,12 +122,14 @@ export default function Software() {
                 rel='noopener noreferrer'
                 className='flex cursor-pointer flex-col items-center rounded-md border border-transparent py-3 sm:py-4 text-zinc-600 transition-transform duration-200 hover:scale-105 hover:bg-zinc-300 hover:text-black dark:text-gray-400 dark:hover:bg-zinc-900/80 dark:hover:text-white'
               >
-                <div className='flex h-[50px] w-[50px] sm:h-[60px] sm:w-[60px] items-center justify-center'>
+                <div className='relative flex h-[50px] w-[50px] sm:h-[60px] sm:w-[60px] items-center justify-center'>
                   {software.logo && (
-                    <img
-                      src={software.logo}
+                    <Image src={software.logo}
                       alt={software.name}
-                      className={`max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110 ${['Next.js', 'Vercel', 'Github', 'Expo'].includes(software.name) ? 'dark:invert-100' : ''}`}
+                      fill
+                      style={{objectFit: 'contain'}}
+                      className={`object-contain transition-transform  duration-300 hover:scale-110 ${['Next.js', 'Vercel', 'Github', 'Expo'].includes(software.name) ? 'dark:invert' : ''}`}
+                      sizes='(max-width: 640px) 50px, (max-width: 768px) 60px, (max-width: 1024px) 60px, (max-width: 1280px) 60px, 60px'
                     />
                   )}
                 </div>

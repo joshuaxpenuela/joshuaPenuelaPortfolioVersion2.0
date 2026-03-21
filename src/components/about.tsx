@@ -42,6 +42,7 @@ export default function About() {
                     <Image
                       src={slide.src}
                       alt={slide.alt}
+                      sizes='(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 100vw, 100vw'
                       fill
                       className='rounded-xl object-contain'
                     />

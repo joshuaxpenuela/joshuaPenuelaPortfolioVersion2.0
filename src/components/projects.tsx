@@ -41,7 +41,10 @@ export default function Projects() {
     {
       id: 2,
       images: [
-        ''
+        'projectspics/kita (1).jpg',
+        'projectspics/kita (2).jpg',
+        'projectspics/kita (3).jpg',
+        'projectspics/kita (4).jpg'
       ],
       name: 'kITa',
       language: [
