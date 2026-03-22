@@ -62,6 +62,24 @@ export default function Projects() {
     {
       id: 3,
       images: [
+        'projectspics/RizalMuseum/RizalMuseum(1).png',
+        'projectspics/RizalMuseum/RizalMuseum(2).png',
+        'projectspics/RizalMuseum/RizalMuseum(3).png',
+        'projectspics/RizalMuseum/RizalMuseum(4).png',
+        'projectspics/RizalMuseum/RizalMuseum(5).png',
+        'projectspics/RizalMuseum/RizalMuseum(6).png',
+        'projectspics/RizalMuseum/RizalMuseum(7).png'
+        
+      ],
+      name: 'KabsuDrip: CvSU Merch Store',
+      language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      description:
+        'Online platform for Kabsuhenyos to buy their most wanted merch of the university conveniently.'
+    },
+    {
+      id: 4,
+      images: [
+        
         'projectspics/KabsuDrip/kabsudrip (1).png',
         'projectspics/KabsuDrip/kabsudrip (2).png',
         'projectspics/KabsuDrip/kabsudrip (3).png',
@@ -75,22 +93,6 @@ export default function Projects() {
         'projectspics/KabsuDrip/kabsudrip (11).png',
         'projectspics/KabsuDrip/kabsudrip (12).png',
         'projectspics/KabsuDrip/kabsudrip (13).png',
-      ],
-      name: 'KabsuDrip: CvSU Merch Store',
-      language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      description:
-        'Online platform for Kabsuhenyos to buy their most wanted merch of the university conveniently.'
-    },
-    {
-      id: 4,
-      images: [
-        'projectspics/RizalMuseum/RizalMuseum(1).png',
-        'projectspics/RizalMuseum/RizalMuseum(2).png',
-        'projectspics/RizalMuseum/RizalMuseum(3).png',
-        'projectspics/RizalMuseum/RizalMuseum(4).png',
-        'projectspics/RizalMuseum/RizalMuseum(5).png',
-        'projectspics/RizalMuseum/RizalMuseum(6).png',
-        'projectspics/RizalMuseum/RizalMuseum(7).png'
       ],
       name: 'Rizal Museum',
       language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
