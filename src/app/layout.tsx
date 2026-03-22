@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning // Add this line here
         className={cn(
           'flex min-h-screen flex-col antialiased',
           poppins.variable
