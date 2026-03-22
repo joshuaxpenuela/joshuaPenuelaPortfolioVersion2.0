@@ -25,13 +25,13 @@ export default function Projects() {
     {
       id: 1,
       images: [
-        'projectspics/taios.png',
-        'projectspics/taios (1).png',
-        'projectspics/taios (2).png',
-        'projectspics/taios (3).png',
-        'projectspics/taios (4).png',
-        'projectspics/taios (5).png',
-        'projectspics/taios (6).png'
+        'projectspics/taios/taios.png',
+        'projectspics/taios/taios (1).png',
+        'projectspics/taios/taios (2).png',
+        'projectspics/taios/taios (3).png',
+        'projectspics/taios/taios (4).png',
+        'projectspics/taios/taios (5).png',
+        'projectspics/taios/taios (6).png'
       ],
       name: 'TAIOS',
       language: ['Laravel 12', 'Blade', 'Node.js', 'MySQL', 'Tailwind CSS'],
@@ -41,12 +41,12 @@ export default function Projects() {
     {
       id: 2,
       images: [
-        'projectspics/kita (1).jpg',
-        'projectspics/kita (2).jpg',
-        'projectspics/kita (3).jpg',
-        'projectspics/kita (4).jpg'
+        'projectspics/kita/kita (1).jpg',
+        'projectspics/kita/kita (2).jpg',
+        'projectspics/kita/kita (3).jpg',
+        'projectspics/kita/kita (4).jpg'
       ],
-      name: 'kITa',
+      name: 'kITa: Android and Web-Based CvSU Lost and Found System',
       language: [
         'Java',
         'Kotlin',
@@ -61,8 +61,22 @@ export default function Projects() {
     },
     {
       id: 3,
-      images: [],
-      name: 'CvSU Merch Store',
+      images: [
+        'projectspics/KabsuDrip/kabsudrip (1).png',
+        'projectspics/KabsuDrip/kabsudrip (2).png',
+        'projectspics/KabsuDrip/kabsudrip (3).png',
+        'projectspics/KabsuDrip/kabsudrip (4).png',
+        'projectspics/KabsuDrip/kabsudrip (5).png',
+        'projectspics/KabsuDrip/kabsudrip (6).png',
+        'projectspics/KabsuDrip/kabsudrip (7).png',
+        'projectspics/KabsuDrip/kabsudrip (8).png',
+        'projectspics/KabsuDrip/kabsudrip (9).png',
+        'projectspics/KabsuDrip/kabsudrip (10).png',
+        'projectspics/KabsuDrip/kabsudrip (11).png',
+        'projectspics/KabsuDrip/kabsudrip (12).png',
+        'projectspics/KabsuDrip/kabsudrip (13).png',
+      ],
+      name: 'KabsuDrip: CvSU Merch Store',
       language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
       description:
         'Online platform for Kabsuhenyos to buy their most wanted merch of the university conveniently.'
@@ -70,13 +84,13 @@ export default function Projects() {
     {
       id: 4,
       images: [
-        'projectspics/RizalMuseum(1).png',
-        'projectspics/RizalMuseum(2).png',
-        'projectspics/RizalMuseum(3).png',
-        'projectspics/RizalMuseum(4).png',
-        'projectspics/RizalMuseum(5).png',
-        'projectspics/RizalMuseum(6).png',
-        'projectspics/RizalMuseum(7).png'
+        'projectspics/RizalMuseum/RizalMuseum(1).png',
+        'projectspics/RizalMuseum/RizalMuseum(2).png',
+        'projectspics/RizalMuseum/RizalMuseum(3).png',
+        'projectspics/RizalMuseum/RizalMuseum(4).png',
+        'projectspics/RizalMuseum/RizalMuseum(5).png',
+        'projectspics/RizalMuseum/RizalMuseum(6).png',
+        'projectspics/RizalMuseum/RizalMuseum(7).png'
       ],
       name: 'Rizal Museum',
       language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
