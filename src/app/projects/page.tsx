@@ -1,7 +1,13 @@
 import { getProjects } from '@/src/lib/projects'
 import Projects from '@/src/components/projects'
+import { Metadata } from 'next'
 import { ShootingStars } from '@/src/components/ui/shooting-stars'
 import { StarsBackground } from '@/src/components/ui/stars-background'
+
+export const metadata: Metadata = {
+  title: 'Joshua Penuela | Projects',
+  description: 'Portfolio of Joshua Penuela',
+}
 
 import React from 'react'
 
