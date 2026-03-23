@@ -30,7 +30,7 @@ export default function Hero() {
                 >
                   <span className='relative z-10'>Download CV</span>
                   {/* sliding background */}
-                  <span className='absolute inset-0 w-0 bg-zinc-900 group-hover:w-full dark:bg-zinc-800'></span>
+                  <span className='absolute inset-0 w-0 duration-300 bg-zinc-900 group-hover:w-full dark:bg-zinc-800'></span>
                 </button>
               </div>
             </div>

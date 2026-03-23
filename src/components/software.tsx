@@ -2,108 +2,34 @@ import React from 'react'
 
 import Image from 'next/image'
 
+const invertNames = new Set(['Next.js', 'Vercel', 'Github', 'Expo'])
+
 const softwares = [
-  {
-    logo: '/logos/nextjs.svg',
-    href: 'https://nextjs.org/',
-    name: 'Next.js'
-  },
-  {
-    logo: 'logos/react.svg',
-    href: 'https://react.dev/',
-    name: 'React'
-  },
-  {
-    logo: 'logos/typescript.svg',
-    href: 'https://www.typescriptlang.org/',
-    name: 'TypeScript'
-  },
-  {
-    logo: 'logos/tailwind.svg',
-    href: 'https://tailwindcss.com/',
-    name: 'TailwindCSS'
-  },
-  {
-    logo: 'logos/nodejs.svg',
-    href: 'https://nodejs.org/en',
-    name: 'Node.js'
-  },
-  {
-    logo: 'logos/npm.svg',
-    href: 'https://www.npmjs.com/',
-    name: 'npm'
-  },
-  {
-    logo: 'logos/javascript.svg',
-    href: 'https://www.javascript.com/',
-    name: 'JavaScript'
-  },
-  {
-    logo: 'logos/expo.svg',
-    href: 'https://expo.dev/',
-    name: 'Expo'
-  },
-  {
-    logo: 'logos/react.svg',
-    href: 'https://reactnative.dev/',
-    name: 'React Native'
-  },
-  {
-    logo: 'logos/python.svg',
-    href: 'https://www.python.org/',
-    name: 'Python'
-  },
-  {
-    logo: 'logos/mysql.svg',
-    href: 'https://www.mysql.com/',
-    name: 'MySQL'
-  },
-  {
-    logo: 'logos/supabase.svg',
-    href: 'https://supabase.com/',
-    name: 'Supabase'
-  },
-  {
-    logo: 'logos/postman.svg',
-    href: 'https://www.postman.com/',
-    name: 'Postman'
-  },
-  {
-    logo: 'logos/vercel.svg',
-    href: 'https://vercel.com/home',
-    name: 'Vercel'
-  },
-  {
-    logo: 'logos/git.svg',
-    href: 'https://git-scm.com/',
-    name: 'Git'
-  },
-  {
-    logo: 'logos/androidstudio.svg',
-    href: 'https://developer.android.com/studio',
-    name: 'Android Studio'
-  },
-  {
-    logo: 'logos/github.svg',
-    href: 'https://github.com/',
-    name: 'Github'
-  },
-  {
-    logo: 'logos/figma.svg',
-    href: 'https://www.figma.com',
-    name: 'Figma'
-  },
-  {
-    logo: 'logos/photoshop.svg',
-    href: 'https://www.adobe.com/ph_en/products/photoshop.html',
-    name: 'Adobe Photoshop'
-  },
-  {
-    logo: 'logos/canva.svg',
-    href: 'https://www.canva.com/',
-    name: 'Canva'
-  }
-]
+  ['react', 'https://react.dev/', 'React'],
+  ['nextjs', 'https://nextjs.org/', 'Next.js'],
+  ['typescript', 'https://www.typescriptlang.org/', 'TypeScript'],
+  ['tailwind', 'https://tailwindcss.com/', 'TailwindCSS'],
+  ['nodejs', 'https://nodejs.org/en', 'Node.js'],
+  ['npm', 'https://www.npmjs.com/', 'npm'],
+  ['javascript', 'https://www.javascript.com/', 'JavaScript'],
+  ['expo', 'https://expo.dev/', 'Expo'],
+  ['react', 'https://reactnative.dev/', 'React Native'],
+  ['python', 'https://www.python.org/', 'Python'],
+  ['mysql', 'https://www.mysql.com/', 'MySQL'],
+  ['supabase', 'https://supabase.com/', 'Supabase'],
+  ['postman', 'https://www.postman.com/', 'Postman'],
+  ['vercel', 'https://vercel.com/home', 'Vercel'],
+  ['git', 'https://git-scm.com/', 'Git'],
+  ['androidstudio', 'https://developer.android.com/studio', 'Android Studio'],
+  ['github', 'https://github.com/', 'Github'],
+  ['figma', 'https://www.figma.com', 'Figma'],
+  ['photoshop', 'https://www.adobe.com/ph_en/products/photoshop.html', 'Adobe Photoshop'],
+  ['canva', 'https://www.canva.com/', 'Canva'],
+].map(([slug, href, name]) => ({
+  logo: `/logos/${slug}.svg`,
+  href,
+  name
+}))
 
 export default function Software() {
   return (

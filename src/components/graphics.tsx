@@ -1,154 +1,19 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { X } from 'lucide-react'
 
-const GraphicDesigns = [
-  {
-    id: 17,
-    name: 'img',
-    image: 'graphicpics/graphics17.png',
-    software: ''
-  },
-  {
-    id: 18,
-    name: 'img',
-    image: 'graphicpics/graphics18.png',
-    software: ''
-  },
-  {
-    id: 19,
-    name: 'img',
-    image: 'graphicpics/graphics19.png',
-    software: ''
-  },
-  {
-    id: 20,
-    name: 'img',
-    image: 'graphicpics/graphics20.png',
-    software: ''
-  },
-  {
-    id: 1,
-    name: 'img',
-    image: 'graphicpics/graphics1.jpg',
-    software: ''
-  },
-  {
-    id: 2,
-    name: 'img',
-    image: 'graphicpics/graphics2.png',
-    software: ''
-  },
-  {
-    id: 3,
-    name: 'img',
-    image: 'graphicpics/graphics3.jpg',
-    software: ''
-  },
-  {
-    id: 4,
-    name: 'img',
-    image: 'graphicpics/graphics4.png',
-    software: ''
-  },
-  {
-    id: 5,
-    name: 'img',
-    image: 'graphicpics/graphics5.png',
-    software: ''
-  },
-  {
-    id: 6,
-    name: 'img',
-    image: 'graphicpics/graphics6.jpg',
-    software: ''
-  },
-  {
-    id: 7,
-    name: 'img',
-    image: 'graphicpics/graphics7.png',
-    software: ''
-  },
-  {
-    id: 8,
-    name: 'img',
-    image: 'graphicpics/graphics8.png',
-    software: ''
-  },
-  {
-    id: 9,
-    name: 'img',
-    image: 'graphicpics/graphics9.png',
-    software: ''
-  },
-  {
-    id: 10,
-    name: 'img',
-    image: 'graphicpics/graphics10.png',
-    software: ''
-  },
-  {
-    id: 11,
-    name: 'img',
-    image: 'graphicpics/graphics11.jpg',
-    software: ''
-  },
-  {
-    id: 12,
-    name: 'img',
-    image: 'graphicpics/graphics12.png',
-    software: ''
-  },
-  {
-    id: 13,
-    name: 'img',
-    image: 'graphicpics/graphics13.jpg',
-    software: ''
-  },
-  {
-    id: 14,
-    name: 'img',
-    image: 'graphicpics/graphics14.png',
-    software: ''
-  },
-  {
-    id: 15,
-    name: 'img',
-    image: 'graphicpics/graphics15.png',
-    software: ''
-  },
-  {
-    id: 16,
-    name: 'img',
-    image: 'graphicpics/graphics16.png',
-    software: ''
-  },
-  {
-    id: 21,
-    name: 'img',
-    image: 'graphicpics/graphics21.jpg',
-    software: ''
-  },
-  {
-    id: 22,
-    name: 'img',
-    image: 'graphicpics/graphics22.jpg',
-    software: ''
-  },
-  {
-    id: 23,
-    name: 'img',
-    image: 'graphicpics/graphics23.jpg',
-    software: ''
-  },
-  {
-    id: 24,
-    name: 'img',
-    image: 'graphicpics/graphics24.png',
-    software: ''
-  }
+const ids = [ 17, 18, 19, 20, ...Array.from({ length: 16 }, (_, i) => i + 1), 21, 22, 23, 24
 ]
+
+const jpgIds = new Set([1, 3, 6, 11, 13, 21, 22, 23])
+
+const GraphicDesigns = ids.map(id => ({
+  id,
+  name: 'img',
+  image: `/graphicpics/graphics${id}.${jpgIds.has(id) ? 'jpg' : 'png'}`,
+  software: ''
+}))
 
 export default function Graphics() {
   const [selectedImage, setSelectedImage] = useState<{
@@ -171,9 +36,12 @@ export default function Graphics() {
     }, 300)
   }
 
-  const handleImageLoad = (id: number) => {
-    setLoadedImages(prev => new Set(prev).add(id))
-  }
+  const handleImageLoad = useCallback((id: number) => {
+    setLoadedImages(prev => {
+      if (prev.has(id)) return prev // no update if already loaded
+      return new Set(prev).add(id)
+    })
+  }, [])
 
   return (
     <section className='flex w-full flex-col items-center pb-24'>
@@ -212,6 +80,9 @@ export default function Graphics() {
                     alt={graphicimage.name}
                     className='h-auto w-full object-cover'
                     onLoad={() => handleImageLoad(graphicimage.id)}
+                    ref={el => {
+                      if (el?.complete) handleImageLoad(graphicimage.id)
+                    }}
                   />
                 </div>
               </div>
