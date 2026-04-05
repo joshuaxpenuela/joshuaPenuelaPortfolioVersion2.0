@@ -39,7 +39,7 @@ export default function Software() {
           <div className='place-items-center-safe pb-15'>
             <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-center px-4'>Softwares</h1>
           </div>
-          <div className='mx-4 sm:mx-8 md:mx-16 lg:mx-40 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5'>
+          <div className='mx-4 sm:mx-8 md:mx-16 lg:mx-35 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5'>
             {softwares.map(software => (
               <a
                 key={software.name}
