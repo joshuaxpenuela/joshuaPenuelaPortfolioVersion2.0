@@ -17,7 +17,7 @@ export default function About() {
 
       {/* Main Content Grid */}
       <div className='max-w-8xl mx-auto mb-6 grid grid-cols-1 gap-8 px-4 sm:mb-8 md:mb-10 md:gap-5 lg:grid-cols-2 lg:gap-45 lg:px-8'>
-        <div className='w-full max-w-[650px] overflow-hidden rounded-2xl'>
+        <div className='animate-fade-in-left delay-200 w-full max-w-[650px] overflow-hidden rounded-2xl'>
           <Image
             src='/pictures/ImgJoshy5.png'
             alt='Joshy Img 5'
