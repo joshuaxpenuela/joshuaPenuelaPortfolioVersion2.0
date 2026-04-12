@@ -4,21 +4,12 @@ import Image from 'next/image'
 
 export default function About() {
   // simple slider data
-  const slides = [
-    { src: '/pictures/ImgJoshy2.jpg', alt: 'Joshy Img 1' },
-    { src: '/pictures/ImgJoshy1.jpg', alt: 'Joshy Img 2' },
-    { src: '/pictures/ImgJoshy3.jpg', alt: 'Joshy Img 3' },
-    { src: '/pictures/ImgJoshy4.jpg', alt: 'Joshy Img 4' }
-  ]
+  const slides = [{}]
 
   const [current, setCurrent] = useState(0)
-  const length = slides.length
-
-  const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1)
-  const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
 
   return (
-    <section className='mt-12 flex w-full flex-col gap-y-6 sm:mt-16 sm:gap-y-8 md:mt-20 md:gap-y-10 font-normal'>
+    <section className='mt-12 flex w-full flex-col gap-y-6 font-normal sm:mt-16 sm:gap-y-8 md:mt-20 md:gap-y-10'>
       {/* Header */}
       <div className='animate-fade-in-down my-6 flex w-full justify-center sm:my-8 md:my-10'>
         <h1 className='text-3xl font-bold sm:text-4xl'>About Me</h1>
@@ -26,63 +17,14 @@ export default function About() {
 
       {/* Main Content Grid */}
       <div className='max-w-8xl mx-auto mb-6 grid grid-cols-1 gap-8 px-4 sm:mb-8 md:mb-10 md:gap-5 lg:grid-cols-2 lg:gap-45 lg:px-8'>
-        <div className='animate-fade-in-left flex w-full items-center justify-center'>
-          <div className='relative h-[400px] w-full max-w-[650px] overflow-hidden sm:h-[480px] md:h-[540px]'>
-            <div
-              className='flex h-full transition-transform duration-300 ease-in-out'
-              style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className='relative flex h-full w-full shrink-0 items-center justify-center'
-                >
-                  {/* Image Container */}
-                  <div className='relative h-full w-full rounded-xl border-2 border-zinc-400/50 bg-zinc-950'>
-                    <Image
-                      src={slide.src}
-                      alt={slide.alt}
-                      sizes='(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 100vw, 100vw'
-                      fill
-                      className='rounded-xl object-contain'
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className='absolute top-1/2 left-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-black/40 p-2 text-xl text-white transition-all hover:scale-110 hover:bg-black/70 sm:p-3 sm:text-2xl'
-              aria-label='Previous slide'
-            >
-              ‹
-            </button>
-            <button
-              onClick={nextSlide}
-              className='absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-black/40 p-2 text-xl text-white transition-all hover:scale-110 hover:bg-black/70 sm:p-3 sm:text-2xl'
-              aria-label='Next slide'
-            >
-              ›
-            </button>
-
-            {/* Dots Indicator */}
-            <div className='absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 space-x-2'>
-              {slides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrent(idx)}
-                  className={`h-2.5 w-2.5 rounded-full transition-all duration-300 sm:h-3 sm:w-3 ${
-                    current === idx
-                      ? 'scale-110 bg-white'
-                      : 'bg-gray-500 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+        <div className='w-full max-w-[650px] overflow-hidden rounded-2xl'>
+          <Image
+            src='/pictures/ImgJoshy5.png'
+            alt='Joshy Img 5'
+            width={650}
+            height={540}
+            className='h-auto w-full object-contain'
+          />
         </div>
 
         {/* Right Side*/}
@@ -140,7 +82,10 @@ export default function About() {
               the Capstone Project.
             </p>
 
-            <p className='mt-5 dark:text-zinc-300'>Aside from Tech, I'm also interested in Science, Journalism, Politics, Film, History, Arts, and Music!</p>
+            <p className='mt-5 dark:text-zinc-300'>
+              Aside from Tech, I'm also interested in Science, Journalism,
+              Politics, Film, History, Arts, and Music!
+            </p>
           </div>
         </div>
       </div>

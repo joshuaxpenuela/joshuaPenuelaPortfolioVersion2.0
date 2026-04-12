@@ -1,6 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { Button } from './ui/button'
+import { Github, Globe } from 'lucide-react'
+import Image from 'next/image'
 
 const languageColors: Record<string, string> = {
   'Laravel 12': 'bg-red-500/20 text-red-700 dark:text-red-300',
@@ -36,7 +39,7 @@ const webProjects = [
   },
   {
     id: 2,
-    name: 'kITa: Android and Web-Based CvSU Lost and Found System',
+    name: 'kITa',
     images: Array.from(
       { length: 4 },
       (_, i) => `projectspics/kita/kita (${i + 1}).jpg`
@@ -51,7 +54,9 @@ const webProjects = [
       'JavaScript'
     ],
     description:
-      'Lost and Found Platform for users (Android App) and admins (Web Platform) to solve the scattered process and difficult experience of finding and surrendering lost items, and centralized the database and management of authorities.'
+      'A Lost and Found Platform for students, faculty, staffs, visitors (Android App), and admins (Web Platform) of Cavite state University - Main Campus to solve the scattered and inefficient process and difficult experience of finding and surrendering lost items, and centralized the database and management of authorities.',
+    github:
+      'https://github.com/joshuaxpenuela/kITa-Lost-and-Found-Android-Application.git'
   },
   {
     id: 3,
@@ -62,7 +67,9 @@ const webProjects = [
     ),
     language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     description:
-      'Online platform for Kabsuhenyos to buy their most wanted merch of the university conveniently.'
+      'Online platform for Kabsuhenyos to buy their most wanted merch of the university conveniently.',
+    github: 'https://github.com/joshuaxpenuela/KabsuDrip.git',
+    live: ''
   },
   {
     id: 4,
@@ -73,7 +80,9 @@ const webProjects = [
     ),
     language: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     description:
-      "A web platform that shows the life and works of the Philippine's national hero, Dr. Jose Rizal."
+      "A web platform that shows the life and works of the Philippine's national hero, Dr. Jose Rizal.",
+    github: 'https://github.com/joshuaxpenuela/RizalMuseum.git',
+    live: ''
   },
   {
     id: 5,
@@ -81,7 +90,10 @@ const webProjects = [
     images: ['projectspics/joshyportfolio.png'],
     language: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript'],
     description:
-      'My personal portfolio website to showcase my skills, projects, and experiences.'
+      'My personal portfolio website to showcase my skills, projects, and experiences.',
+    github:
+      'https://github.com/joshuaxpenuela/joshuaPenuelaPortfolioVersion2.0.git',
+    live: 'https://joshuaxpenuela.vercel.app'
   }
 ]
 
@@ -127,23 +139,29 @@ function ProjectCard({ project }: { project: any }) {
   const prevSlide = () => setCurrent(c => (c === 0 ? total - 1 : c - 1))
 
   return (
-    <div className='cursor-pointer rounded-md border-2 border-gray-800/50 p-5 backdrop-blur-sm transition-all hover:bg-gray-300/50 dark:border-gray-400/50 dark:bg-zinc-950/80 dark:hover:bg-zinc-900'>
+    <div className='rounded-md border-2 border-gray-800/50 p-5 backdrop-blur-sm transition-all hover:bg-gray-300/50 dark:border-gray-400/50 dark:bg-zinc-950/80 dark:hover:bg-zinc-900'>
       {/* Image Slider */}
       {total > 0 && (
         <div className='relative my-2 w-full overflow-hidden rounded-xl border-2'>
           <div
-            className='flex h-full transition-transform duration-300 ease-in-out'
+            className='flex transition-transform duration-300 ease-in-out'
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {project.images.map((image: string, index: number) => (
               <div
                 key={index}
-                className='relative flex h-full w-full shrink-0 items-center justify-center backdrop-blur-xl'
+                className='relative flex aspect-video w-full shrink-0 items-center justify-center backdrop-blur-xl'
               >
-                <img
-                  src={image}
-                  alt={project.name}
-                  className='h-full w-full object-contain'
+                <Image
+                  src={`/${image}`}
+                  alt={`${project.name} Image ${index + 1}`}
+                  fill
+                  loading='eager'
+                  className='object-cover'
+                  sizes='(max-width: 640px) 100vw,
+                  (max-width: 1024px) 90vw,
+                  (max-width: 1280px) 80vw,
+                  70vw'
                 />
               </div>
             ))}
@@ -175,7 +193,42 @@ function ProjectCard({ project }: { project: any }) {
         </div>
       )}
 
-      <h1 className='text-2xl font-bold md:text-2xl'>{project.name}</h1>
+      <div className='realtive mt-3 flex items-center justify-between'>
+        <h1 className='text-2xl font-bold md:text-2xl'>{project.name}</h1>
+        <div className='flex gap-3 text-gray-600 dark:text-gray-300'>
+          {/* GitHub Button Fix */}
+          {project.github && (
+            <Button
+              variant='outline'
+              size='icon'
+              className='dark:bg-950 dark:border-zinc-600 dark:hover:bg-zinc-700'
+              asChild
+            >
+              <a
+                href={project.github}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Github className='h-5 w-5' />
+              </a>
+            </Button>
+          )}
+
+          {/* Live Link Button Fix */}
+          {project.live && (
+            <Button
+              variant='outline'
+              size='icon'
+              className='dark:bg-950 dark:border-zinc-600 dark:hover:bg-zinc-700'
+              asChild
+            >
+              <a href={project.live} target='_blank' rel='noopener noreferrer'>
+                <Globe className='h-5 w-5' />
+              </a>
+            </Button>
+          )}
+        </div>
+      </div>
 
       {/* Language Badges */}
       <div className='my-3 flex flex-wrap gap-2'>
