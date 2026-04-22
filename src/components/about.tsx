@@ -67,7 +67,7 @@ export default function About() {
               program at{' '}
               <a
                 href='https://cvsu.edu.ph/'
-                className='font-bold text-white hover:underline'
+                className='font-bold dark:text-white text-shadow-zinc-950 hover:underline'
                 target='_blank'
               >
                 {' '}
