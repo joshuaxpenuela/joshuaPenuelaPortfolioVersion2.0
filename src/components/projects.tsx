@@ -54,7 +54,7 @@ const webProjects = [
       'JavaScript'
     ],
     description:
-      'A Lost and Found Platform for students, faculty, staffs, visitors (Android App), and admins (Web Platform) of Cavite state University - Main Campus to solve the scattered and inefficient process and difficult experience of finding and surrendering lost items, and centralized the database and management of authorities.',
+      'A Lost and Found Platform for students, faculty, staffs, visitors (Android App), and admins (Web Platform) of Cavite State University - Main Campus to solve the scattered and inefficient process and difficult experience of finding and surrendering lost items, and centralized the database and management of authorities.',
     github:
       'https://github.com/joshuaxpenuela/kITa-Lost-and-Found-Android-Application.git'
   },
