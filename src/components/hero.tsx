@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import JoshyImage from '@/public/pictures/Joshyyy.png'
+import JoshyImage from '@/public/pictures/Joshyyy1.png'
 
 export default function Hero() {
   return (
@@ -9,13 +9,13 @@ export default function Hero() {
       <div className='grid w-full grid-cols-1 md:grid-cols-2 justify-between gap-6 md:gap-4 dark:text-white'>
         
         {/* Left side */}
-        <div className='order-2 md:order-1 flex items-center justify-center md:place-items-center-safe py-8 sm:py-12 md:py-40 lg:py-80 px-4 sm:px-6'>
+        <div className='order-2 md:order-1 flex items-center justify-center md:place-items-center-safe py-8 sm:py-12 md:py-30 lg:py-80 px-4 sm:px-6'>
           <div className='text-center md:text-left'>
             <div className='space-y-2'>
-              <h1 className='text-3xl text-zinc-700 dark:text-zinc-400 sm:text-4xl md:text-5xl lg:text-6xl animate-fade-in-up'>Hi I'm</h1>
-              <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold animate-fade-in-up animation-delay-100'>Joshua!</h1>
+              <h1 className='text-3xl text-zinc-700 dark:text-zinc-400 sm:text-4xl md:text-4xl lg:text-5xl animate-fade-in-up'>Hey! I'm</h1>
+              <h1 className='text-5xl sm:text-6xl md:pb-3 md:text-7xl lg:text-8xl font-bold animate-fade-in-up animation-delay-100'>Joshy!</h1>
               <h1 className='text-xl text-zinc-700 dark:text-zinc-400 sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-2 animate-fade-in-up animation-delay-200'>
-                Web <a className='font-normal'>and</a> Mobile Developer
+                Web <a className='font-normal'>and</a> Mobile Developer,
               </h1>
               <h1 className='text-xl text-zinc-700 dark:text-zinc-400 sm:text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in-up animation-delay-300'>
                 Tech Enthusiast, Graphic Designer
