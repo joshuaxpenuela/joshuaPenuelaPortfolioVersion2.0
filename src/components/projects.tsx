@@ -13,6 +13,7 @@ const languageColors: Record<string, string> = {
   TypeScript: 'bg-blue-500/20 text-blue-700 dark:text-blue-300',
   Kotlin: 'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300',
   React: 'bg-blue-500/20 text-blue-700 dark:text-blue-300',
+  ReactNative: 'bg-blue-500/20 text-blue-700 dark:text-blue-300',
   PHP: 'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300',
   JavaScript: 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-300',
   Java: 'bg-orange-500/20 text-orange-700 dark:text-orange-300',
@@ -94,6 +95,17 @@ const webProjects = [
     github:
       'https://github.com/joshuaxpenuela/joshuaPenuelaPortfolioVersion2.0.git',
     live: 'https://joshuaxpenuela.vercel.app'
+  },
+  {
+    id: 6,
+    name: 'Stopwatch Timer',
+    images: ['projectspics/React-StopwatchTimer.jpg'],
+    language: ['Expo', 'ReactNative', 'TypeScript', 'CSS'],
+    description:
+      'A simple stopwatch timer application built with React Native (Expo).',
+    github:
+      'https://github.com/joshuaxpenuela/StopwatchTimer.git',
+    live: ''
   }
 ]
 
